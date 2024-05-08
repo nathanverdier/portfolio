@@ -5,7 +5,7 @@ import { MesProjectsContainer } from "../MesProjectsContainer";
 const MesProjects = () => {
     return( 
   
-      <Box style={{background: 'var(--gray-a2)', width: '100%'}}>
+      <Box style={{background: 'var(--gray-a2)', width: '100%', borderRadius: '50px'}}>
         <CustomContainer>
           <StyledH2>Mes Projects</StyledH2>
 
