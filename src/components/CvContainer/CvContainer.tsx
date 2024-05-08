@@ -1,7 +1,5 @@
 import { Avatar, Box, Card, Flex, Text } from "@radix-ui/themes";
 
-
-
 interface CvContainerProps {
 	imagesSource : string;
 	titre : string;
