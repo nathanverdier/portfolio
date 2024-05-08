@@ -4,7 +4,7 @@ import { StyledH2, StyledText, CustomContainer, CustomContainerText } from "./st
 const APropos = () => {
 
     return(
-        <Box style={{background: 'var(--gray-a2)', width: '100%'}}>
+        <Box style={{background: 'var(--gray-a2)', width: '100%', marginBottom: '20px', borderRadius: '50px'}}>
         <CustomContainer>
                 <StyledH2>A propos de moi</StyledH2>
                 <CustomContainerText>
