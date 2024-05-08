@@ -7,11 +7,11 @@ const BarBottom = () => {
     
     return(
         <StyledTabNavRoot justify="center">
-            <TabNav.Link href="#" > <BsFillTelephoneInboundFill/>: 07 81 14 55 43</TabNav.Link>
+            <TabNav.Link href="#" style={{ pointerEvents: "none" }}> <BsFillTelephoneInboundFill/>: 07 81 14 55 43</TabNav.Link>
             <TabNav.Link href="mailto:nathanverdier34@gmail.com"> <EnvelopeOpenIcon/> : nathanverdier34@gmail.com </TabNav.Link>
             <TabNav.Link href="https://www.linkedin.com/in/nathan-verdier-1b6421116/"> <LinkedInLogoIcon/> : nathan-verdier </TabNav.Link>
             <TabNav.Link href="https://github.com/waarx11"> <GitHubLogoIcon/> : Mes projets</TabNav.Link>
-            <TabNav.Link href="#"> <DownloadIcon/> : Mon CV</TabNav.Link>
+            <TabNav.Link href="../../../../public/NATHAN_VERDIER_CV.pdf"> <DownloadIcon/> : Mon CV</TabNav.Link>
         </StyledTabNavRoot>
       
     );
