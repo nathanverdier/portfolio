@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import { Box, Container, Text } from "@radix-ui/themes";
 
 export const StyledH2 = styled.h2`
-    text-align: left;
+    text-align: center;
 `;
 
 export const StyledText = styled(Text)`
