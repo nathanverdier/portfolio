@@ -6,7 +6,7 @@ const CVBars = () => {
     
     return(
       
-      <Box style={{background: 'var(--gray-a2)', width: '100%', borderRadius: '50px', paddingBottom: '50px', marginBottom: '20px'}}>
+      <Box id="cv" style={{background: 'var(--gray-a2)', width: '100%', borderRadius: '50px', paddingBottom: '50px', marginBottom: '20px'}}>
         <CustomContainer>
           <StyledH2>CV</StyledH2>
           <Tabs.Root defaultValue="experience">  
