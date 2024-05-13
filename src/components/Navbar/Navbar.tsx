@@ -6,14 +6,24 @@ const Navbar = () => {
 
     const [activeTab, setActiveTab] = useState('accueil');
 
+    const scrollTo = (elementId: string) => {
+        document.getElementById(elementId)?.scrollIntoView({ behavior: 'smooth' });
+      };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     return(
         <StyledTabNavRoot justify="start" wrap="wrap">
-            <TabNav.Link href="#" active={activeTab === 'accueil'} onClick={() => setActiveTab('accueil')}>Accueil</TabNav.Link>
-            <TabNav.Link href="#apropos" active={activeTab === 'apropos'} onClick={() => setActiveTab('apropos')}>A propos de moi</TabNav.Link>
-            <TabNav.Link href="#cv" active={activeTab === 'cv'} onClick={() => setActiveTab('cv')}>CV</TabNav.Link>
-            <TabNav.Link href="#projets" active={activeTab === 'projets'} onClick={() => setActiveTab('projets')}>Mes projets</TabNav.Link>
+            <TabNav.Link onClick={() => { setActiveTab('accueil'); scrollToTop(); }} active={activeTab === 'accueil'}>Accueil</TabNav.Link>
+            <TabNav.Link onClick={() => { setActiveTab('apropos'); scrollTo('apropos'); }} active={activeTab === 'apropos'}>A propos de moi</TabNav.Link>
+            <TabNav.Link onClick={() => { setActiveTab('cv'); scrollTo('cv'); }} active={activeTab === 'cv'}>CV</TabNav.Link>
+            <TabNav.Link onClick={() => { setActiveTab('projets'); scrollTo('projets'); }} active={activeTab === 'projets'}>Mes projets</TabNav.Link>
         </StyledTabNavRoot>
-      
     );
 };
 
