@@ -3,7 +3,7 @@ import { StyledTabNavRoot } from "./style";
 import { useState } from 'react';
 import testGif from '../../assets/testGif.gif';
 
-const ProjetPopup = ({ onClose }: { onClose: any }) => {
+const ProjetPopup = ({ onClose, title }: { onClose: () => void, title: string }) => {
 
     return(
         <Dialog.Root open={true}>
@@ -14,7 +14,7 @@ const ProjetPopup = ({ onClose }: { onClose: any }) => {
                     Fermer
                 </Button>
             </Dialog.Close> 
-            <Dialog.Title>Name Project</Dialog.Title>
+            <Dialog.Title>{title}</Dialog.Title>
             <Dialog.Description size="2" mb="4">
             Jeux de société
             </Dialog.Description>
