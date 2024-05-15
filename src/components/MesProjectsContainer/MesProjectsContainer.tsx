@@ -19,30 +19,26 @@ const MesProjectsContainer = ({onClick, data} : CvContainerProps) => {
             <CustomContainerText>
                 <Box maxWidth="240px">
                 <div onClick={onClick} style={{ cursor: 'pointer' }}>
-                    <Card>
-                        <Flex gap="3" align="center">
-                        <Avatar
-                            size="5"
-                            src={data.imagesSource}
-                            radius="full"
-                            fallback="T"
-                        />
-                        <Box>
-                            <Text as="div" size="2" weight="bold">
-                            {data.titre}
-                            </Text>
-                            <Text as="div" size="2" color="gray">
-                            {data.date}
-                            </Text>
-                            <Text as="div" size="2" color="gray">
-                            {data.description}
-                            </Text>
-                        </Box>
-                        </Flex>
-                        <Text as="div" size="2" style={{ color: 'blue', marginTop: '8px', textAlign: 'center' }}>
-                            Cliquer ici pour voir plus
-                        </Text>
-                    </Card>
+                <Card style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+                    <Avatar
+                        size="7"
+                        src={data.imagesSource}
+                        radius="small"
+                        fallback="T"
+                    />
+                    <Text as="div" size="2" weight="bold">
+                        {data.titre}
+                    </Text>
+                    <Text as="div" size="2" color="gray">
+                        {data.date}
+                    </Text>
+                    <Text as="div" size="2" color="gray">
+                        {data.description}
+                    </Text>
+                    <Text as="div" size="2" style={{ color: 'blue', marginTop: '8px' }}>
+                        Cliquer ici pour voir plus
+                    </Text>
+                </Card>
                 </div>
                 </Box>
             </CustomContainerText>
