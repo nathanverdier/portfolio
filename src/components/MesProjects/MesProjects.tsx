@@ -1,13 +1,16 @@
 import { Box } from "@radix-ui/themes";
 import { CustomContainer, CustomContainerText, StyledH2 } from "./style";
 import { MesProjectsContainer } from "../MesProjectsContainer";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { ProjetPopup } from "../ProjetPopup";
+import { project1Data, project2Data, project3Data } from "../../utils/projectData";
 
 const MesProjects = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [selectedTitle, setSelectedTitle] = useState("");
 
-  const handleCardClick = () => {
+  const handleOpenDialog = (title: SetStateAction<string>) => {
+    setSelectedTitle(title);
     setIsDialogOpen(true);
   };
   
@@ -21,29 +24,20 @@ const MesProjects = () => {
         
             <Box pt="3" style={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
               <MesProjectsContainer
-                onClick={handleCardClick} 
-                imagesSource="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?&w=64&h=64&dpr=2&q=70&crop=focalpoint&fp-x=0.67&fp-y=0.5&fp-z=1.4&fit=crop"
-                titre="Titre du CV"
-                date="Date du CV"
-                description="Description du CV ezc ezc ze cezc ez c"
+                onClick={() => handleOpenDialog(project1Data.titre)}
+                data={project1Data}
               />
 
               <MesProjectsContainer
-                onClick={handleCardClick} 
-                imagesSource="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?&w=64&h=64&dpr=2&q=70&crop=focalpoint&fp-x=0.67&fp-y=0.5&fp-z=1.4&fit=crop"
-                titre="Titre du CV"
-                date="Date du CV"
-                description="Description du CV ezc ezc ze cezc ez c"
+                onClick={() => handleOpenDialog(project2Data.titre)}
+                data={project2Data}
               />
 
               <MesProjectsContainer
-                onClick={handleCardClick} 
-                imagesSource="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?&w=64&h=64&dpr=2&q=70&crop=focalpoint&fp-x=0.67&fp-y=0.5&fp-z=1.4&fit=crop"
-                titre="Titre du CV"
-                date="Date du CV"
-                description="Description du CV ezc ezc ze cezc ez c"
+                onClick={() => handleOpenDialog(project3Data.titre)}
+                data={project3Data}
               />
-              {isDialogOpen && <ProjetPopup onClose={() => setIsDialogOpen(false)} />}
+              {isDialogOpen && <ProjetPopup onClose={() => setIsDialogOpen(false)} title={selectedTitle} />}
       
             </Box>
           </CustomContainerText>
