@@ -6,15 +6,17 @@ interface CvContainerProps {
 	titre : string;
 	date : string;
 	description : string;
+	onClick: () => void;
 }
 
-const MesProjectsContainer = ({imagesSource, titre, description} : CvContainerProps) => {
+const MesProjectsContainer = ({onClick, imagesSource, titre, description} : CvContainerProps) => {
 
     return(
         <Box style={{ width: '100%'}}>
         <CustomContainer>
             <CustomContainerText>
                 <Box maxWidth="240px">
+                <div onClick={onClick} style={{ cursor: 'pointer' }}>
                     <Card>
                         <Flex gap="3" align="center">
                         <Avatar
@@ -32,7 +34,11 @@ const MesProjectsContainer = ({imagesSource, titre, description} : CvContainerPr
                             </Text>
                         </Box>
                         </Flex>
+                        <Text as="div" size="2" style={{ color: 'blue', marginTop: '8px', textAlign: 'center' }}>
+                            Cliquer ici pour voir plus
+                        </Text>
                     </Card>
+                </div>
                 </Box>
             </CustomContainerText>
         </CustomContainer>
