@@ -2,14 +2,16 @@ import { Avatar, Box, Card, Flex, Text } from "@radix-ui/themes";
 import { CustomContainer, CustomContainerText } from "./style";
 
 interface CvContainerProps {
-	imagesSource : string;
-	titre : string;
-	date : string;
-	description : string;
+    data: {
+        imagesSource: string;
+        titre: string;
+        date: string;
+        description: string;
+      };
 	onClick: () => void;
 }
 
-const MesProjectsContainer = ({onClick, imagesSource, titre, description} : CvContainerProps) => {
+const MesProjectsContainer = ({onClick, data} : CvContainerProps) => {
 
     return(
         <Box style={{ width: '100%'}}>
@@ -21,16 +23,19 @@ const MesProjectsContainer = ({onClick, imagesSource, titre, description} : CvCo
                         <Flex gap="3" align="center">
                         <Avatar
                             size="5"
-                            src={imagesSource}
+                            src={data.imagesSource}
                             radius="full"
                             fallback="T"
                         />
                         <Box>
                             <Text as="div" size="2" weight="bold">
-                            {titre}
+                            {data.titre}
                             </Text>
                             <Text as="div" size="2" color="gray">
-                            {description}
+                            {data.date}
+                            </Text>
+                            <Text as="div" size="2" color="gray">
+                            {data.description}
                             </Text>
                         </Box>
                         </Flex>
