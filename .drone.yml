@@ -36,8 +36,6 @@ steps:
       CONTAINERNAME: nathanverdier_rendu_portfolio
       COMMAND: create
       OVERWRITE: true
-      CODEFIRST_CLIENTDRONE_ENV_PORT: 8081
-      CODEFIRST_CLIENTDRONE_ENV_HOST: "0.0.0.0"
       ADMINS: nathanverdier
       CODEFIRST_CLIENTDRONE_ENV_API_BASEURL: http://nathanverdier_rendu_portfolio.net/
     depends_on: [ docker-build-and-push ]
