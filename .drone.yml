@@ -37,5 +37,4 @@ steps:
       COMMAND: create
       OVERWRITE: true
       ADMINS: nathanverdier
-      CODEFIRST_CLIENTDRONE_ENV_API_BASEURL: http://nathanverdier_rendu_portfolio.net/
     depends_on: [ docker-build-and-push ]
