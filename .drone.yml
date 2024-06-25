@@ -1,0 +1,52 @@
+kind: pipeline
+type: docker
+name: CD_portfolio
+
+trigger:
+  branch:
+    - master
+  event:
+    - push
+
+steps:
+ 
+  - name: build
+    image: node:latest
+    environment:
+      CODEFIRST_CLIENTDRONE_ENV_DB_SERVER:
+        from_secret: db_server
+      CODEFIRST_CLIENTDRONE_ENV_MONGO_INITDB_ROOT_USERNAME: 
+        from_secret: mongo_root_username
+      CODEFIRST_CLIENTDRONE_ENV_MONGO_INITDB_ROOT_PASSWORD:
+        from_secret: mongo_root_password
+      CODEFIRST_CLIENTDRONE_ENV_PORT: 8081
+      CODEFIRST_CLIENTDRONE_ENV_HOST: "0.0.0.0"
+    commands:
+      - npm install
+      - npm run build
+
+  - name: docker-build-and-push
+    image: plugins/docker
+    settings:
+       dockerfile: Dockerfile
+       context: .
+       registry: hub.codefirst.iut.uca.fr
+       repo: hub.codefirst.iut.uca.fr/nathanverdier_rendu_portfoli
+       username:
+         from_secret: SECRET_REGISTRY_USERNAME
+       password:
+         from_secret: SECRET_REGISTRY_PASSWORD
+    depends_on: [ build ]
+
+  - name: deploy-container
+    image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
+    environment:
+      IMAGENAME: hub.codefirst.iut.uca.fr/nathanverdier_rendu_portfoli:latest
+      CONTAINERNAME: nathanverdier_rendu_portfoli
+      COMMAND: create
+      OVERWRITE: true
+      CODEFIRST_CLIENTDRONE_ENV_PORT: 8081
+      CODEFIRST_CLIENTDRONE_ENV_HOST: "0.0.0.0"
+      ADMINS: nathanverdier
+      CODEFIRST_CLIENTDRONE_ENV_API_BASEURL: http://nathanverdier_rendu_portfoli.net/
+    depends_on: [ docker-build-and-push ]
