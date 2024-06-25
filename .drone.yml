@@ -25,17 +25,30 @@ steps:
        dockerfile: Dockerfile
        context: .
        registry: hub.codefirst.iut.uca.fr
-       repo: hub.codefirst.iut.uca.fr/nathanverdier_rendu_portfolio
+       repo: hub.codefirst.iut.uca.fr/nathan.verdier/nathanverdier_rendu_portfolio
        username:
          from_secret: SECRET_REGISTRY_USERNAME
        password:
          from_secret: SECRET_REGISTRY_PASSWORD
     depends_on: [ build ]
 
+
+  - name: docker-build-and-push
+    image: plugins/docker
+    settings:
+       dockerfile: Dockerfile
+       context: .
+       registry: hub.codefirst.iut.uca.fr
+       repo: hub.codefirst.iut.uca.fr/nathan.verdier/nathanverdier_rendu_portfolio
+       username:
+         from_secret: SECRET_REGISTRY_USERNAME
+       password:
+         from_secret: SECRET_REGISTRY_PASSWORD
+
   - name: deploy-container
     image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
     environment:
-      IMAGENAME: hub.codefirst.iut.uca.fr/nathanverdier_rendu_portfolio:latest
+      IMAGENAME: hub.codefirst.iut.uca.fr/nathan.verdier/nathanverdier_rendu_portfolio:latest
       CONTAINERNAME: nathanverdier_rendu_portfolio
       COMMAND: create
       OVERWRITE: true
