@@ -13,12 +13,6 @@ steps:
   - name: build
     image: node:latest
     environment:
-      CODEFIRST_CLIENTDRONE_ENV_DB_SERVER:
-        from_secret: db_server
-      CODEFIRST_CLIENTDRONE_ENV_MONGO_INITDB_ROOT_USERNAME: 
-        from_secret: mongo_root_username
-      CODEFIRST_CLIENTDRONE_ENV_MONGO_INITDB_ROOT_PASSWORD:
-        from_secret: mongo_root_password
       CODEFIRST_CLIENTDRONE_ENV_PORT: 8081
       CODEFIRST_CLIENTDRONE_ENV_HOST: "0.0.0.0"
     commands:
