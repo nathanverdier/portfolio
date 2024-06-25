@@ -1,6 +1,4 @@
-import { AlertDialog, Button, Dialog, Flex, Text, TextField } from "@radix-ui/themes";
-import { StyledTabNavRoot } from "./style";
-import { useState } from 'react';
+import { Button, Dialog, Flex, Text } from "@radix-ui/themes";
 import testGif from '../../assets/testGif.gif';
 
 const ProjetPopup = ({ onClose, title }: { onClose: () => void, title: string }) => {
