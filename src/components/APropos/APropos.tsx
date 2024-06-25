@@ -11,6 +11,12 @@ const APropos = () => {
                     <StyledText> Bonjour ! Je suis actuellement en 3ème année de BUT Informatique en alternance chez Imaaagery, une expérience qui m'a permis de plonger au cœur du monde professionnel tout en approfondissant mes connaissances dans le domaine de l'informatique.</StyledText>
                     <StyledText>En dehors de mes études et de mon travail en alternance, je suis passionné par la musculation, le bien être de sois.</StyledText>
                 </CustomContainerText>
+                <StyledH2>Mon parcours scolaire</StyledH2>
+                <CustomContainerText>
+                    <StyledText> Bonjour ! Je suis actuellement en 3ème année de BUT Informatique en alternance chez Imaaagery, une expérience qui m'a permis de plonger au cœur du monde professionnel tout en approfondissant mes connaissances dans le domaine de l'informatique.</StyledText>
+                    <StyledText>En dehoprs de mes études et de mon travail en alternance, je suis passionné par la musculation, le bien être de sois.</StyledText>
+                </CustomContainerText>
+                
         </CustomContainer>
         </Box>
 
