@@ -1,4 +1,4 @@
-import { Avatar, Box, Card, Flex, Text } from "@radix-ui/themes";
+import { Avatar, Box, Card, Text } from "@radix-ui/themes";
 import { CustomContainer, CustomContainerText } from "./style";
 
 interface CvContainerProps {
