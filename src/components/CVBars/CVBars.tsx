@@ -1,4 +1,4 @@
-import { Avatar, Box, Table, Tabs} from "@radix-ui/themes";
+import { Box, Table, Tabs} from "@radix-ui/themes";
 import { CvContainer } from "../CvContainer";
 import { CustomCell, CustomCellTop, CustomContainer, CustomRow, StyledH2 } from "./style";
 import imageryLogo from '../../assets/imaageryLogo.jpeg';
