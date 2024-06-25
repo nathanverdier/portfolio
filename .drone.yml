@@ -11,7 +11,7 @@ trigger:
 steps:
  
   - name: build
-    image: node:latest
+    image: node:18
     commands:
       - npm install
       - npm run build
@@ -36,5 +36,7 @@ steps:
       CONTAINERNAME: nathanverdier_rendu_portfolio
       COMMAND: create
       OVERWRITE: true
+      CODEFIRST_CLIENTDRONE_ENV_PORT: 8081
+      CODEFIRST_CLIENTDRONE_ENV_HOST: "0.0.0.0"
       ADMINS: nathanverdier
     depends_on: [ docker-build-and-push ]
