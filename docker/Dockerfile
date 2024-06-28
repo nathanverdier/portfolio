@@ -11,6 +11,13 @@ RUN npm install -g typescript
 
 COPY . .
 
+# Ajouter des déclarations de modules pour les assets
+RUN echo "declare module '*.png';" > src/declarations.d.ts
+RUN echo "declare module '*.jpg';" >> src/declarations.d.ts
+RUN echo "declare module '*.jpeg';" >> src/declarations.d.ts
+RUN echo "declare module '*.gif';" >> src/declarations.d.ts
+RUN echo "declare module '*.svg';" >> src/declarations.d.ts
+
 RUN npm run build
 
 # Étape 2: Production
