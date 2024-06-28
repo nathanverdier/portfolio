@@ -1,18 +1,39 @@
+# FROM node:18
+
+# WORKDIR /app
+
+# EXPOSE 80
+
+# COPY package*.json ./
+
+# RUN npm install --production
+
+# # Installer TypeScript globalement
+# RUN npm install -g typescript
+
+# COPY . .
+
+# RUN npm run build
+
+# CMD [ "npm", "run", "preview" ]
+
+# pull official base image
 FROM node:18
 
+# set working directory
 WORKDIR /app
 
-EXPOSE 80
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
 
-COPY package*.json ./
+# install app dependencies
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install --silent
+RUN npm install react-scripts@3.4.1 -g --silent
 
-RUN npm install --production
+# add app
+COPY . ./
 
-# Installer TypeScript globalement
-RUN npm install -g typescript
-
-COPY . .
-
-RUN npm run build
-
-CMD [ "npm", "run", "preview" ]
+# start app
+CMD ["npm", "start"]
