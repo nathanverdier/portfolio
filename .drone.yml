@@ -1,42 +1,40 @@
 kind: pipeline
 type: docker
-name: CD_portfolio
+name: Deploiement
 
 trigger:
   branch:
     - master
+    - CI/CD
   event:
     - push
 
 steps:
- 
-  - name: build
-    image: node:18
-    commands:
-      - npm install
-      - npm run build
+  - name: code-analysis
+    image: aosapps/drone-sonar-plugin
+    settings: 
+      sonar_host:
+        from_secret: sonar_host
+      sonar_token:
+        from_secret: sonar_token
 
   - name: docker-build-and-push
     image: plugins/docker
     settings:
-       dockerfile: Dockerfile
+       dockerfile: docker/Dockerfile
        context: .
        registry: hub.codefirst.iut.uca.fr
+       mirror: https://proxy.iut.uca.fr:8443
        repo: hub.codefirst.iut.uca.fr/nathan.verdier/nathanverdier_rendu_portfolio
        username:
          from_secret: SECRET_REGISTRY_USERNAME
        password:
          from_secret: SECRET_REGISTRY_PASSWORD
-    depends_on: [ build ]
 
   - name: deploy-container
     image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
     environment:
-      IMAGENAME: hub.codefirst.iut.uca.fr/nathan.verdier/nathanverdier_rendu_portfolio:latest
-      CONTAINERNAME: nathanverdier_rendu_portfolio
-      COMMAND: create
-      OVERWRITE: true
-      CODEFIRST_CLIENTDRONE_ENV_PORT: 8081
-      CODEFIRST_CLIENTDRONE_ENV_HOST: "0.0.0.0"
-      ADMINS: nathanverdier
-    depends_on: [ docker-build-and-push ]
+        IMAGENAME: hub.codefirst.iut.uca.fr/nathan.verdier/nathanverdier_rendu_portfolio:latest
+        CONTAINERNAME: htmlcss-portfolio
+        COMMAND: create
+        OVERWRITE: true
