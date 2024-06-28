@@ -1,20 +1,33 @@
-# pull official base image
-FROM node:18
+# Étape 1 : Construction du projet React
+FROM node:18 AS build
 
-# set working directory
+# Définir le répertoire de travail
 WORKDIR /app
 
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
-
-# install app dependencies
+# Copier les fichiers de dépendances
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm install --silent
-RUN npm install react-scripts@3.4.1 -g --silent
 
-# add app
+# Installer les dépendances
+RUN npm install --silent
+
+# Copier le reste des fichiers de l'application
 COPY . ./
 
-# start app
-CMD ["npm", "start"]
+# Construire l'application React
+RUN npm run build
+
+# Étape 2 : Configuration de Nginx pour servir les fichiers construits
+FROM nginx:alpine
+
+# Copier les fichiers construits vers le répertoire Nginx
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Copier la configuration personnalisée de Nginx si nécessaire
+# COPY nginx.conf /etc/nginx/nginx.conf
+
+# Exposer le port 80
+EXPOSE 80
+
+# Démarrer Nginx
+CMD ["nginx", "-g", "daemon off;"]
