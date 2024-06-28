@@ -2,11 +2,14 @@ FROM node:18
 
 WORKDIR /app
 
-EXPOSE 8081
+EXPOSE 80
 
 COPY package*.json ./
 
 RUN npm install --production
+
+# Installer TypeScript globalement
+RUN npm install -g typescript
 
 COPY . .
 
