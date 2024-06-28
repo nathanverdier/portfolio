@@ -22,6 +22,10 @@ RUN echo "declare module '*.svg';" >> src/declarations.d.ts
 # Construire l'application
 RUN npm run build
 
+# Débogage : lister les fichiers après le build
+RUN ls -la /app
+RUN ls -la /app/build
+
 # Étape 2: Production
 FROM node:18-alpine AS production
 
