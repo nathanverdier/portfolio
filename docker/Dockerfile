@@ -14,17 +14,14 @@ RUN npm install --silent
 # Copier le reste des fichiers de l'application
 COPY . ./
 
-# Construire l'application React
-RUN npm run build -- --base-href=/containers/nathanverdier-htmlcss-portfolio/
+# Construire l'application React avec base
+RUN npm run build -- --base=/containers/nathanverdier-htmlcss-portfolio/
 
 # Étape 2 : Configuration de Nginx pour servir les fichiers construits
 FROM nginx:alpine
 
 # Copier les fichiers construits vers le répertoire Nginx
 COPY --from=build /app/dist /usr/share/nginx/html
-
-# Copier la configuration personnalisée de Nginx
-# COPY docker/nginx.conf /etc/nginx/nginx.conf
 
 # Exposer le port 80
 EXPOSE 80
