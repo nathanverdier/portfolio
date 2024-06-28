@@ -19,8 +19,11 @@ RUN echo "declare module '*.jpeg';" >> src/declarations.d.ts
 RUN echo "declare module '*.gif';" >> src/declarations.d.ts
 RUN echo "declare module '*.svg';" >> src/declarations.d.ts
 
-# Construire l'application
-RUN npm run build
+# Lister les fichiers avant de construire
+RUN ls -la /app
+
+# Construire l'application et capturer les journaux
+RUN npm run build || { echo 'Build failed'; exit 1; }
 
 # Débogage : lister les fichiers après le build
 RUN ls -la /app
