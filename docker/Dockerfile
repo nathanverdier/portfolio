@@ -6,11 +6,8 @@ WORKDIR /app
 # Copier les fichiers package.json et package-lock.json
 COPY package*.json ./
 
-# Installer les dépendances
-RUN npm install --production
-
-# Installer TypeScript et Vite globalement
-RUN npm install -g typescript vite
+# Installer toutes les dépendances y compris celles de développement
+RUN npm install
 
 # Copier le reste des fichiers
 COPY . .
