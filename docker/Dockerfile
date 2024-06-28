@@ -17,14 +17,17 @@ COPY . ./
 # Construire l'application React
 RUN npm run build
 
-# Étape 2-: Configuration de Nginx pour servir les fichiers construits
-FROM php:8.0-apache
+# Étape 2 : Configuration de Nginx pour servir les fichiers construits
+FROM nginx:alpine
 
 # Copier les fichiers construits vers le répertoire Nginx
-COPY --from=build /app/dist /var/www/html/
-WORKDIR /var/www/html/
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Copier la configuration personnalisée de Nginx
+COPY docker/nginx.conf /etc/nginx/nginx.conf
+
 # Exposer le port 80
 EXPOSE 80
 
 # Démarrer Nginx
-#CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
