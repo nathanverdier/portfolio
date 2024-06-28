@@ -1,46 +1,89 @@
-# Étape 1: Build
-FROM node:18 AS build
+# syntax=docker/dockerfile:1.4
 
+# 1. For build React app
+FROM node:lts AS development
+
+# Set working directory
 WORKDIR /app
 
-# Copier les fichiers package.json et package-lock.json
-COPY package*.json ./
+# 
+COPY package.json /app/package.json
+COPY package-lock.json /app/package-lock.json
 
-# Installer toutes les dépendances y compris celles de développement
-RUN npm install
+# Same as npm install
+RUN npm ci
 
-# Copier le reste des fichiers
-COPY . .
+COPY . /app
 
-# Ajouter des déclarations de modules pour les assets
-RUN echo "declare module '*.png';" > src/declarations.d.ts
-RUN echo "declare module '*.jpg';" >> src/declarations.d.ts
-RUN echo "declare module '*.jpeg';" >> src/declarations.d.ts
-RUN echo "declare module '*.gif';" >> src/declarations.d.ts
-RUN echo "declare module '*.svg';" >> src/declarations.d.ts
+ENV CI=true
+ENV PORT=3000
 
-# Lister les fichiers avant de construire
-RUN ls -la /app
+CMD [ "npm", "start" ]
 
-# Construire l'application et capturer les journaux
-RUN npm run build || { echo 'Build failed'; exit 1; }
+FROM development AS build
 
-# Débogage : lister les fichiers après le build
-RUN ls -la /app
-RUN ls -la /app/build
+RUN npm run build
 
-# Étape 2: Production
-FROM node:18-alpine AS production
 
-WORKDIR /app
+FROM development as dev-envs
+RUN <<EOF
+apt-get update
+apt-get install -y --no-install-recommends git
+EOF
 
-# Copier uniquement les fichiers nécessaires pour l'étape de production
-COPY --from=build /app/package*.json ./
-COPY --from=build /app/node_modules ./node_modules
-COPY --from=build /app/build ./build
+RUN <<EOF
+useradd -s /bin/bash -m vscode
+groupadd docker
+usermod -aG docker vscode
+EOF
+# install Docker tools (cli, buildx, compose)
+COPY --from=gloursdocker/docker / /
+CMD [ "npm", "start" ]
 
-# Exposer le port 80
+# 2. For Nginx setup
+FROM nginx:alpine
 EXPOSE 80
+# Copy config nginx
+COPY --from=build /app/.nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
-# Commande pour démarrer l'application
-CMD [ "npx", "serve", "-s", "build" ]
+WORKDIR /usr/share/nginx/html
+
+# Remove default nginx static assets
+RUN rm -rf ./*
+
+# Copy static assets from builder stage
+COPY --from=build /app/build .
+
+# Containers run nginx with global directives and daemon off
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
