@@ -35,7 +35,7 @@ steps:
     image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
     environment:
         IMAGENAME: hub.codefirst.iut.uca.fr/nathan.verdier/nathanverdier_rendu_portfolio:latest
-        CONTAINERNAME: htmlcss-portfolio
+        CONTAINERNAME: portfolio
         COMMAND: create
         OVERWRITE: true
 
