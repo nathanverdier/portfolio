@@ -1,5 +1,5 @@
 # Étape 1 : Construction du projet React
-FROM node:18 AS build
+FROM node:latest AS build
 
 # Définir le répertoire de travail
 WORKDIR /app
@@ -15,7 +15,7 @@ RUN npm install --silent
 COPY . ./
 
 # Construire l'application React avec base
-RUN npm run build -- --base=/containers/nathanverdier-htmlcss-portfolio/
+RUN npm run build -- --base=/containers/nathanverdier-portfolio/
 
 # Étape 2 : Configuration de Nginx pour servir les fichiers construits
 FROM nginx:alpine
