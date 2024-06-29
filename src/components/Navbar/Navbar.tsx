@@ -9,7 +9,7 @@ const Navbar = () => {
     const scrollTo = (elementId: string) => {
         const element = document.getElementById(elementId);
         if (element) {
-            const offset = elementId === 'accueil' ? 0 : 50; // Pas de marge pour 'home'
+            const offset = elementId === 'accueil' ? 0 : 50; // Pas de marge pour 'accueil'
             window.scrollTo({
                 top: element.offsetTop - offset,
                 behavior: 'smooth'
@@ -19,21 +19,29 @@ const Navbar = () => {
 
     const scrollToTop = () => {
         window.scrollTo({
-            top: 50,
+            top: 0,
             behavior: 'smooth'
         });
     };
 
     useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY === 0) {
+                setActiveTab('accueil');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
         const observer = new IntersectionObserver(
             entries => {
                 entries.forEach(entry => {
-                    if (entry.boundingClientRect.top < 0) {
+                    if (entry.isIntersecting) { // Utilisation de isIntersecting pour vérifier si l'élément est visible
                         setActiveTab(entry.target.id);
                     }
                 });
             },
-            { threshold: 0 }
+            { threshold: [0.5] } // Ajuster le threshold selon vos besoins
         );
 
         const sections = ['accueil', 'apropos', 'cv', 'projets'];
@@ -46,14 +54,13 @@ const Navbar = () => {
         });
 
         return () => {
-            if (sectionsRef.current) {
-                sections.forEach(id => {
-                    const element = sectionsRef.current[id];
-                    if (element) {
-                        observer.unobserve(element);
-                    }
-                });
-            }
+            window.removeEventListener('scroll', handleScroll);
+            sections.forEach(id => {
+                const element = sectionsRef.current[id];
+                if (element) {
+                    observer.unobserve(element);
+                }
+            });
         };
     }, []);
 
