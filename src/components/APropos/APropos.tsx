@@ -1,6 +1,6 @@
 import { Box } from "@radix-ui/themes";
 import { StyledH2, StyledText, CustomContainer, CustomContainerText } from "./style";
-import imageProfil from "../../assets/photoProfil.jpg";
+// import imageProfil from "../../assets/photoProfil.jpg";
 
 const APropos = () => {
 
