@@ -10,7 +10,7 @@ const APropos = () => {
         <Box id="apropos" style={{background: 'var(--gray-a2)', width: '100%', marginBottom: '20px', borderRadius: '50px'}}>
             <CustomContainer>  
                 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                    <StyledH2 style={{ marginRight: '20px' }}>A propos de moi</StyledH2>
+                    <StyledH2 style={{ marginRight: '20px' }}>À propos de moi</StyledH2>
                     <MyAvatar imageUrl={myPicture} altText="Photo de profil" fallbackText="Photo de profil" />
                 </div>
                      <CustomContainerText>

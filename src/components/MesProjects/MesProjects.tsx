@@ -22,7 +22,7 @@ const MesProjects = () => {
     <Box id="projets" style={{background: 'var(--gray-a2)', width: '100%', borderRadius: '50px'}}>
       <CustomContainer>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <StyledH2 style={{ marginRight: '20px' }}>Mes Projects</StyledH2>
+            <StyledH2 style={{ marginRight: '20px' }}>Mes projets</StyledH2>
             <MyAvatar imageUrl={logoProjet} altText="Photo de profil" fallbackText="Photo de profil" />
         </div>
 

@@ -45,8 +45,8 @@ const CVBars = () => {
           <Box pt="3">
             <Tabs.Content value="experience">
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-              <MyAvatar imageUrl={logoExpPro} altText="Mes expériences professionnelle" fallbackText="Photo de profil" />
-              <StyledH2 style={{ marginLeft: '20px' }}>Mes expériences professionnelle</StyledH2>
+              <MyAvatar imageUrl={logoExpPro} altText="Mes expériences professionnelles" fallbackText="Photo de profil" />
+              <StyledH2 style={{ marginLeft: '20px' }}>Mes expériences professionnelles</StyledH2>
             </div>
             <CvContainer 
             imagesSource={imageryLogo}
