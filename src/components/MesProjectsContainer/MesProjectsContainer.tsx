@@ -3,7 +3,7 @@ import { CustomContainer, CustomContainerText } from "./style";
 
 interface CvContainerProps {
     data: {
-        imagesSource: string;
+        imageslogo: string;
         titre: string;
         date: string;
         description: string;
@@ -22,7 +22,7 @@ const MesProjectsContainer = ({onClick, data} : CvContainerProps) => {
                 <Card style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
                     <Avatar
                         size="7"
-                        src={data.imagesSource}
+                        src={data.imageslogo}
                         radius="small"
                         fallback="T"
                     />

@@ -1,49 +1,54 @@
+import { useState } from "react";
 import { Box } from "@radix-ui/themes";
 import { CustomContainer, CustomContainerText, StyledH2 } from "./style";
 import { MesProjectsContainer } from "../MesProjectsContainer";
-import { SetStateAction, useState } from "react";
 import { ProjetPopup } from "../ProjetPopup";
 import { project1Data, project2Data, project3Data } from "../../utils/projectData";
+import MyAvatar from "../MyAvatar/MyAvatar";
+import logoProjet from '../../assets/logoGithub.png';
 
 const MesProjects = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [selectedTitle, setSelectedTitle] = useState("");
+  // Modifier pour stocker les données du projet sélectionné
+  const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleOpenDialog = (title: SetStateAction<string>) => {
-    setSelectedTitle(title);
+  // Modifier pour accepter l'objet de données du projet
+  const handleOpenDialog = (projectData: any) => {
+    setSelectedProject(projectData);
     setIsDialogOpen(true);
   };
   
-    return( 
-  
-      <Box id="projets" style={{background: 'var(--gray-a2)', width: '100%', borderRadius: '50px'}}>
-        <CustomContainer>
-          <StyledH2>Mes Projects</StyledH2>
+  return (
+    <Box id="projets" style={{background: 'var(--gray-a2)', width: '100%', borderRadius: '50px'}}>
+      <CustomContainer>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <StyledH2 style={{ marginRight: '20px' }}>Mes Projects</StyledH2>
+            <MyAvatar imageUrl={logoProjet} altText="Photo de profil" fallbackText="Photo de profil" />
+        </div>
 
-          <CustomContainerText>
-        
-            <Box pt="3" style={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
-              <MesProjectsContainer
-                onClick={() => handleOpenDialog(project1Data.titre)}
-                data={project1Data}
-              />
+        <CustomContainerText>
+          <Box pt="3" style={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
+            <MesProjectsContainer
+              onClick={() => handleOpenDialog(project1Data)}
+              data={project1Data}
+            />
 
-              <MesProjectsContainer
-                onClick={() => handleOpenDialog(project2Data.titre)}
-                data={project2Data}
-              />
+            <MesProjectsContainer
+              onClick={() => handleOpenDialog(project2Data)}
+              data={project2Data}
+            />
 
-              <MesProjectsContainer
-                onClick={() => handleOpenDialog(project3Data.titre)}
-                data={project3Data}
-              />
-              {isDialogOpen && <ProjetPopup onClose={() => setIsDialogOpen(false)} title={selectedTitle} />}
-      
-            </Box>
-          </CustomContainerText>
-        </CustomContainer>
-      </Box>
-    );
+            <MesProjectsContainer
+              onClick={() => handleOpenDialog(project3Data)}
+              data={project3Data}
+            />
+            {/* Passer l'état du projet sélectionné à la prop `data` */}
+            {isDialogOpen && <ProjetPopup onClick={() => setIsDialogOpen(false)} data={selectedProject}/>}
+          </Box>
+        </CustomContainerText>
+      </CustomContainer>
+    </Box>
+  );
 };
 
 export default MesProjects;
