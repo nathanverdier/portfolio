@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box } from "@radix-ui/themes";
+import { Box, Button, Flex } from "@radix-ui/themes";
 import { CustomContainer, CustomContainerText, StyledH2 } from "./style";
 import { MesProjectsContainer } from "../MesProjectsContainer";
 import { ProjetPopup } from "../ProjetPopup";
@@ -46,6 +46,14 @@ const MesProjects = () => {
             {isDialogOpen && <ProjetPopup onClick={() => setIsDialogOpen(false)} data={selectedProject}/>}
           </Box>
         </CustomContainerText>
+
+        <Flex gap="3" mt="4" justify="center">
+            <a href="https://github.com/waarx11?tab=repositories" style={{ textDecoration: 'none' }}>
+                <Button variant="ghost">
+                    Voir le reste de mes projets
+                </Button>
+            </a>
+        </Flex>
       </CustomContainer>
     </Box>
   );
