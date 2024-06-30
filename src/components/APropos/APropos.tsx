@@ -3,7 +3,6 @@ import { StyledH2, StyledText, CustomContainer, CustomContainerText, CustomConta
 import MyAvatar from "../MyAvatar/MyAvatar";
 import myPicture from '../../assets/photoProfil.jpg';
 import logoEtud from '../../assets/logoScolaire.jpg';
-import logoExpPro from '../../assets/logoExperiencePro.png';
 
 const APropos = () => {
 
