@@ -5,7 +5,7 @@ import imageryLogo from '../../assets/imaageryLogo.jpeg';
 import uqacLogo from '../../assets/uqacLogo.png';
 import mcdoLogo from '../../assets/McdoLogo.png';
 import asaLogo from '../../assets/asaLogo.jpeg';
-import cssLogo from '../../assets/cssLogo.png';
+import htmlCssJS from '../../assets/htmlCssJs.png';
 import CLogo from '../../assets/CLogo.png';
 import CPlusLogo from '../../assets/CPlusLogo.png';
 import sqlLogo from '../../assets/sqlLogo.png';
@@ -18,6 +18,13 @@ import shelLogo from '../../assets/shellLogo.png';
 import bashLogo from '../../assets/bashLogo.png';
 import kotlinLogo from '../../assets/kotlinLogo.png';
 import javaLogo from '../../assets/Java-logo.png';
+import MyAvatar from "../MyAvatar/MyAvatar";
+import logoCV from '../../assets/logoCV.png';
+import logoExpPro from '../../assets/logoExperiencePro.png';
+import logoCompetence from '../../assets/logoCompetences.jpg';
+import logoPython from '../../assets/logoPython.png';
+import logoSwift from '../../assets/logoSwift.png';
+import logoTs from '../../assets/logoTypescript.png';
 
 const CVBars = () => {
     
@@ -25,7 +32,10 @@ const CVBars = () => {
       
       <Box id="cv" style={{background: 'var(--gray-a2)', width: '100%', borderRadius: '50px', paddingBottom: '50px', marginBottom: '20px'}}>
         <CustomContainer>
-          <StyledH2>CV</StyledH2>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <StyledH2 style={{ marginRight: '20px' }}>CV</StyledH2>
+            <MyAvatar imageUrl={logoCV} altText="Photo de profil" fallbackText="Photo de profil" />
+        </div>
           <Tabs.Root defaultValue="experience">  
           <Tabs.List>
             <Tabs.Trigger value="experience">Mes expériences</Tabs.Trigger>
@@ -34,6 +44,10 @@ const CVBars = () => {
         
           <Box pt="3">
             <Tabs.Content value="experience">
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+              <MyAvatar imageUrl={logoExpPro} altText="Mes expériences professionnelle" fallbackText="Photo de profil" />
+              <StyledH2 style={{ marginLeft: '20px' }}>Mes expériences professionnelle</StyledH2>
+            </div>
             <CvContainer 
             imagesSource={imageryLogo}
             titre="Alternance en Web, Machine learning et Deep learning"
@@ -68,6 +82,10 @@ const CVBars = () => {
             </Tabs.Content>
         
             <Tabs.Content value="competences">
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+              <MyAvatar imageUrl={logoCompetence} altText="Mes compétences" fallbackText="Photo de profil" />
+              <StyledH2 style={{ marginLeft: '20px' }}>Mes compétences</StyledH2>
+            </div>
             <Table.Root>
               <Table.Header>
                 <CustomRow>
@@ -79,7 +97,7 @@ const CVBars = () => {
 
               <Table.Body>
                 <CustomRow>
-                  <CustomCell><img src={cssLogo} alt="CSS Logo" style={{width: '70px', height: '42px'}}/></CustomCell>
+                  <CustomCell><img src={htmlCssJS} alt="CSS Logo" style={{width: '80px', height: '42px', verticalAlign: 'center'}}/></CustomCell>
                   <CustomCell><img src={CLogo} alt="C Logo" style={{width: '30px', height: '30px'}}/></CustomCell>
                   <CustomCell><img src={sqlLogo} alt="SQL Logo" style={{width: '55px', height: '30px'}}/></CustomCell>
                 </CustomRow>
@@ -97,7 +115,7 @@ const CVBars = () => {
                 </CustomRow>
 
                 <CustomRow>
-                  <CustomCell></CustomCell>
+                <CustomCell><img src={logoTs} alt="Ts logo" style={{width: '10', height: '40px'}}/></CustomCell>
                   <CustomCell><img src={shelLogo} alt="cSharp Logo" style={{width: '30px', height: '30px'}}/></CustomCell>
                   <CustomCell></CustomCell>
                 </CustomRow>
@@ -119,7 +137,19 @@ const CVBars = () => {
                   <CustomCell><img src={kotlinLogo} alt="cSharp Logo" style={{width: '120px', height: '30px'}}/></CustomCell>
                   <CustomCell></CustomCell>
                 </CustomRow>
-              </Table.Body>
+
+                <CustomRow>
+                  <CustomCell></CustomCell>
+                  <CustomCell><img src={logoPython} alt="python Logo" style={{width: '120px', height: '30px'}}/></CustomCell>
+                  <CustomCell></CustomCell>
+                </CustomRow>
+
+                <CustomRow>
+                  <CustomCell></CustomCell>
+                  <CustomCell><img src={logoSwift} alt="swift Logo" style={{width: '90px', height: '30px'}}/></CustomCell>
+                  <CustomCell></CustomCell>
+                </CustomRow>
+                              </Table.Body>
             </Table.Root>
 
             </Tabs.Content>
