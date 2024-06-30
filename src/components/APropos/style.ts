@@ -22,3 +22,11 @@ export const CustomContainerText = styled(Container)`
     padding: 20px;
     border-radius: 50px;
 `;
+
+export const CustomContainerText2 = styled(Container)`
+    width: 50%;
+    max-width: 50%;
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 50px;
+`;
