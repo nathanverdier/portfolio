@@ -1,4 +1,5 @@
 import kotangaLogo from '../assets/kotanga.png';
+import kotangaImg from '../assets/kotangaImg.svg';
 import DouShouQiLogo from '../assets/doushouqi.png';
 import DouShouQiImg from '../assets/imageDoushouQI.png';
 import BoardConquestLogo from '../assets/logoBoardConquest.png';
@@ -29,11 +30,11 @@ export const project2Data = {
 export const project3Data = {
     titre: "Kotanga",
     imageslogo: kotangaLogo,
-    magesSource: kotangaLogo,
+    imagesSource: kotangaImg,
     date: "29/04/2023",
-    description: "Project réaliser en Kotlin",
-    descriptionLongue: "Project réaliser en Swift",
-    text: "Notre application porte pour nom Kotanga ce qui signifie compter en Lingala. Réalisé en équipe de 5, elle a pour but de faciliter les paiments entre amis, au sein d'un groupe de personne comme des collocataires, des familles, ...Sur notre application, vous serez averti dès qu'un autre utilisateur d'un même groupe que vous envoie un message, actualise ses dettes, déclare une nouvelle dépense et autre... Le scanner vous permettra un gain de temps lorsque vous souhaitez déclarer une nouvelle dépense. L'application est totalement gratuite et sans pub ! Vos données ne sont accessibles qu'à vous et vous seul et sont stockées sur une base de données complétement sécurisée.",
+    description: "Projet réalisé en Kotlin",
+    descriptionLongue: "Réalisé en équipe de 5, kotlin, android studio, firebase, gitlab, ...",
+    text: "Notre application porte pour nom Kotanga ce qui signifie compter en Lingala. Elle a pour but de faciliter les paiments entre amis, au sein d'un groupe de personne comme des collocataires, des familles, ...Sur notre application, vous serez averti dès qu'un autre utilisateur d'un même groupe que vous envoie un message, actualise ses dettes, déclare une nouvelle dépense et autre... Le scanner vous permettra un gain de temps lorsque vous souhaitez déclarer une nouvelle dépense. L'application est totalement gratuite et sans pub ! Vos données ne sont accessibles qu'à vous et vous seul et sont stockées sur une base de données complétement sécurisée.",
     url: "https://gitlab.com/nathanverdier/kotanga"
 };
 
