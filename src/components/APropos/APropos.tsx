@@ -37,12 +37,25 @@ const APropos = () => {
                             <StyledText>Short program for undergraduate students on study abroad.</StyledText><br />
                         </CustomContainerText2>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', gap: '20px', marginTop: '30px' }}>
                         <CustomContainerText2>
                             <StyledText style={{ fontWeight: 'bold' }}>University Bachelor of Technology in Computer Science</StyledText><br />
                             <StyledText>September 2021 - September 2024</StyledText><br />
                             <StyledText>IUT Informatique, Clermont-Ferrand (63)</StyledText><br />
-                            <StyledText>University Diploma of Technology in Computer Science. Awarded the "Responsible Digital" prize during the "24h to undertake" event.</StyledText><br />
+                            <StyledText>University Diploma of Technology in Computer Science.</StyledText><br />
+                            <StyledText>Awarded the "Responsible Digital" prize during the "24h to undertake" event.</StyledText><br />
+                        </CustomContainerText2>
+                        <CustomContainerText2>
+                            <StyledText style={{ fontWeight: 'bold' }}>MASTER SETSIS</StyledText><br />
+                            <StyledText>September 2024 - Present</StyledText><br />
+                            <StyledText>Embedded Systems(Microcontrollers, FPGA programming, C/C++, assembly language)</StyledText><br />
+                            <StyledText>Machine Learning and AI for Embedded Systems</StyledText><br />
+                            <StyledText>Hardware-Software Integration</StyledText><br />
+                            <StyledText>Signal and Image Processing</StyledText><br />
+
+                            
+
+
                         </CustomContainerText2>
                     </div>
             </CustomContainer>
