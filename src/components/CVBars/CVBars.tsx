@@ -33,65 +33,65 @@ const CVBars = () => {
       <Box id="cv" style={{background: 'var(--gray-a2)', width: '100%', borderRadius: '50px', paddingBottom: '50px', marginBottom: '20px'}}>
         <CustomContainer>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <StyledH2 style={{ marginRight: '20px' }}>CV</StyledH2>
+            <StyledH2 style={{ marginRight: '20px' }}>Resume</StyledH2>
             <MyAvatar imageUrl={logoCV} altText="Photo de profil" fallbackText="Photo de profil" />
         </div>
           <Tabs.Root defaultValue="experience">  
           <Tabs.List>
-            <Tabs.Trigger value="experience">Mes expériences</Tabs.Trigger>
-            <Tabs.Trigger value="competences">Compétences</Tabs.Trigger>
+            <Tabs.Trigger value="experience">My experiences</Tabs.Trigger>
+            <Tabs.Trigger value="competences">Skills</Tabs.Trigger>
           </Tabs.List>
         
           <Box pt="3">
             <Tabs.Content value="experience">
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-              <MyAvatar imageUrl={logoExpPro} altText="Mes expériences professionnelles" fallbackText="Photo de profil" />
-              <StyledH2 style={{ marginLeft: '20px' }}>Mes expériences professionnelles</StyledH2>
+              <MyAvatar imageUrl={logoExpPro} altText="My professional experiences" fallbackText="Photo de profil" />
+              <StyledH2 style={{ marginLeft: '20px' }}>My professional experiences</StyledH2>
             </div>
             <CvContainer 
             imagesSource={imageryLogo}
-            titre="Alternance en Web, Machine learning et Deep learning"
-            date="SEPTEMBRE 2023 - SEPTEMBRE 2024"
-            description="Solide expérience en machine learning et deep learning.
-                          Segmentation, classification et clustering.
-                          Utilisation PyTorch, Yolov8, KNN, divers algorithmes
-                          d’apprentissage automatique"
+            titre="Apprenticeship in Web, Machine learning, and Deep learning"
+            date="SEPTEMBER 2023 - SEPTEMBER 2024"
+            description="Solid experience in machine learning and deep learning.
+                          Segmentation, classification, and clustering.
+                          Use of PyTorch, Yolov8, KNN, and various machine learning
+                          algorithms."
             />
             <CvContainer 
             imagesSource={uqacLogo}
-            titre="Stage développement de jeux vidéo"
-            date="AVRIL 2023 - JUIN 2023"
-            description="Période de 10 semaines dans le laboratoire informatique
-                          de l'UQAC .
-                          Utilisation de Unreal Engine, C++, Perforce."
+            titre="Video Game Development Internship"
+            date="APRIL 2023 - JUNE 2023"
+            description="10-week period in the computer lab
+                          at UQAC.
+                          Use of Unreal Engine, C++, Perforce."
             />
             <CvContainer 
             imagesSource={mcdoLogo}
-            titre="Équipier polyvalent"
-            date="JUIN 2021 - OCTOBRE 2021 ET JUIN 2022 - AOÛT 2022"
-            description="Employé en qualité d’équipier polyvalent en restauration
-                        rapide. M'a appris le travail en équipe, la gestion du stress,
-                        de rush et à être très réactif."
+            titre="Crew Member"
+            date="JUNE 2021 - OCTOBER 2021 AND JUNE 2022 - AUGUST 2022"
+            description="Worked as a crew member in fast food.
+                          Taught me teamwork, stress management, handling rushes,
+                          and being highly responsive."
             />
             <CvContainer 
             imagesSource={asaLogo}
-            titre="Job d'été"
-            date="juin 2018 - août 2018"
-            description="Inventaire magasin, aménagement atelier, soutiens aux opérateurs sur des réparations d’éléments d’aéronefs."
+            titre="Summer Job"
+            date="JUNE 2018 - AUGUST 2018"
+            description="Store inventory, workshop setup, assisting operators with aircraft component repairs."
             />
             </Tabs.Content>
         
             <Tabs.Content value="competences">
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-              <MyAvatar imageUrl={logoCompetence} altText="Mes compétences" fallbackText="Photo de profil" />
-              <StyledH2 style={{ marginLeft: '20px' }}>Mes compétences</StyledH2>
+              <MyAvatar imageUrl={logoCompetence} altText="My skills" fallbackText="Photo de profil" />
+              <StyledH2 style={{ marginLeft: '20px' }}>My skills</StyledH2>
             </div>
             <Table.Root>
               <Table.Header>
                 <CustomRow>
-                  <CustomCellTop>Langage web</CustomCellTop>
-                  <CustomCellTop>Langage de programmation</CustomCellTop>
-                  <CustomCellTop>Langage BD</CustomCellTop>
+                  <CustomCellTop>Web Languages</CustomCellTop>
+                  <CustomCellTop>Programming Languages</CustomCellTop>
+                  <CustomCellTop>Database Languages</CustomCellTop>
                 </CustomRow>
               </Table.Header>
 
