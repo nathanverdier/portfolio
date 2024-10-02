@@ -8,7 +8,7 @@ const TopContainer = () => {
         <Conteneur>
             <StyledImage
                 src={imageTop}
-                alt="A house in a forest"
+                alt="Portfolio"
             />
             <StyledText>VERDIER Nathan</StyledText>
         </Conteneur>
