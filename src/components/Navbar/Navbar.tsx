@@ -66,10 +66,10 @@ const Navbar = () => {
 
     return (
         <StyledTabNavRoot justify="start" wrap="wrap">
-            <TabNav.Link onClick={() => { setActiveTab('accueil'); scrollToTop(); }} active={activeTab === 'accueil'}>Accueil</TabNav.Link>
-            <TabNav.Link onClick={() => { setActiveTab('apropos'); scrollTo('apropos'); }} active={activeTab === 'apropos'}>À propos de moi</TabNav.Link>
-            <TabNav.Link onClick={() => { setActiveTab('cv'); scrollTo('cv'); }} active={activeTab === 'cv'}>CV</TabNav.Link>
-            <TabNav.Link onClick={() => { setActiveTab('projets'); scrollTo('projets'); }} active={activeTab === 'projets'}>Mes projets</TabNav.Link>
+            <TabNav.Link onClick={() => { setActiveTab('accueil'); scrollToTop(); }} active={activeTab === 'accueil'}>Home</TabNav.Link>
+            <TabNav.Link onClick={() => { setActiveTab('apropos'); scrollTo('apropos'); }} active={activeTab === 'apropos'}>About me</TabNav.Link>
+            <TabNav.Link onClick={() => { setActiveTab('cv'); scrollTo('cv'); }} active={activeTab === 'cv'}>Resume</TabNav.Link>
+            <TabNav.Link onClick={() => { setActiveTab('projets'); scrollTo('projets'); }} active={activeTab === 'projets'}>My projects</TabNav.Link>
         </StyledTabNavRoot>
     );
 };
