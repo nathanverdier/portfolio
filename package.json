@@ -32,4 +32,9 @@
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   }
+  "homepage": "https://waarx11.github.io/portfolio",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
 }
