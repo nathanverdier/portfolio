@@ -50,7 +50,7 @@ const MesProjects = () => {
         <Flex gap="3" mt="4" justify="center">
             <a href="https://github.com/waarx11?tab=repositories" style={{ textDecoration: 'none' }}>
                 <Button variant="ghost">
-                    Voir le reste de mes projets
+                  See the rest of my projects
                 </Button>
             </a>
         </Flex>
