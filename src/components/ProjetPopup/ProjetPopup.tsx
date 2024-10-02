@@ -24,7 +24,7 @@ const ProjetPopup = ({ data, onClick }: ProjetProps) => {
             <Dialog.Content maxWidth="850px" style={{ position: 'relative' }}>
                 <Dialog.Close onClick={onClick} style={{ position: 'absolute', top: '20px', right: '20px' }}>        
                     <Button variant="soft" color="red">
-                        Fermer
+                        Close
                     </Button>
                 </Dialog.Close> 
                 <Dialog.Title>{titre}</Dialog.Title>
@@ -44,7 +44,7 @@ const ProjetPopup = ({ data, onClick }: ProjetProps) => {
                 <Flex gap="3" mt="4" justify="center">
                     <a href={url} style={{ textDecoration: 'none' }}>
                         <Button variant="ghost">
-                            En savoir plus
+                            Learn more
                         </Button>
                     </a>
                 </Flex>
