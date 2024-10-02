@@ -10,9 +10,9 @@ export const project1Data = {
     imageslogo: DouShouQiLogo,
     imagesSource: DouShouQiImg,
     date: "24/06/2024",
-    description: "Project réaliser en Swift",
-    descriptionLongue: "Une application iOS du jeu de société DouShouQi",
-    text: "Swift, SwiftUI, SpriteKit. Réalisée au sein d'une équipe de trois, durant ma 3ème année de BUT, l'application permet de jouer au jeu de société chinois DouShouQi. Elle permet aussi de voir la liste des joueurs que vous avez créés ainsi que leur score respectif. L'application a été développé en Swift et utilise les bibliothèques SpriteKit et SwiftUI.",
+    description: "Project made in Swift",
+    descriptionLongue: "An iOS application of the DouShouQi board game",
+    text: "Swift, SwiftUI, SpriteKit. Created within a team of three during my 3rd year of BUT, the application allows you to play the Chinese board game DouShouQi. It also lets you view the list of players you have created and their respective scores. The application was developed in Swift and uses the SpriteKit and SwiftUI libraries.",
     url: "https://codefirst.iut.uca.fr/git/remi.regnault/DouShouQi_App"
 };
 
@@ -22,8 +22,8 @@ export const project2Data = {
     imagesSource: BoardConquestImg,
     date: "23/06/23",
     description: "Unreal Engine, C++",
-    descriptionLongue: "Projet réaliser au sein de l'UQAC en C++ et Unreal Engine",
-    text: "Réalisée au sein d'une équipe de 2, durant ma formation au sein de l'UQAC, le jeu est un jeu d'échec 3D avec des pions de différentes races. Vous pouvez choisir entre 3 plateaux de jeu dont la taille et les pions de départ varient, mais aussi 3 pouvoir à utiliser intelligement durant votre partie. L'application a été développé avec Unreal Engine et pour la majeur partie des fonctionnalités, en C++.",
+    descriptionLongue: "Project created at UQAC in C++ and Unreal Engine",
+    text: "Created within a team of 2 during my training at UQAC, the game is a 3D chess game with pieces of different races. You can choose between 3 game boards whose size and starting pieces vary, as well as 3 powers to use strategically during your game. The application was developed with Unreal Engine and primarily implemented in C++.",
     url: "https://gitlab.com/nathanverdier/boardconquest"
 };
 
@@ -32,9 +32,9 @@ export const project3Data = {
     imageslogo: kotangaLogo,
     imagesSource: kotangaImg,
     date: "29/04/2023",
-    description: "Projet réalisé en Kotlin",
-    descriptionLongue: "Réalisé en équipe de 5, kotlin, android studio, firebase, gitlab, ...",
-    text: "Notre application porte pour nom Kotanga ce qui signifie compter en Lingala. Elle a pour but de faciliter les paiments entre amis, au sein d'un groupe de personne comme des collocataires, des familles, ...Sur notre application, vous serez averti dès qu'un autre utilisateur d'un même groupe que vous envoie un message, actualise ses dettes, déclare une nouvelle dépense et autre... Le scanner vous permettra un gain de temps lorsque vous souhaitez déclarer une nouvelle dépense. L'application est totalement gratuite et sans pub ! Vos données ne sont accessibles qu'à vous et vous seul et sont stockées sur une base de données complétement sécurisée.",
+    description: "Project made in Kotlin",
+    descriptionLongue: "Created within a team of 5, using Kotlin, Android Studio, Firebase, Gitlab, ...",
+    text: "Our application is named Kotanga, which means 'to count' in Lingala. It aims to facilitate payments between friends, within a group of people such as roommates, families, etc. On our application, you will be notified whenever another user in the same group as you sends a message, updates their debts, declares a new expense, and more. The scanner will save you time when you want to declare a new expense. The application is completely free and without ads! Your data is accessible only to you and stored in a fully secure database.",
     url: "https://gitlab.com/nathanverdier/kotanga"
 };
 
