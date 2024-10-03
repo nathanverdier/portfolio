@@ -14,15 +14,15 @@ const APropos = () => {
                     <MyAvatar imageUrl={myPicture} altText="Photo de profil" fallbackText="Photo de profil" />
                 </div>
                     <CustomContainerText>
-                        <StyledText>Hello!<br /></StyledText>
+                        <StyledText>Hello! 😊<br /></StyledText>
                         <StyledText>
-                        I have just obtained my <strong>Bachelor's degree in Computer Science</strong> from the IUT Informatique and am currently starting a <strong>Master's degree in SETSIS</strong> at EUPI (Clermont-Ferrand 63), specializing in embedded technologies, as well as image and sound processing.<br/>
+                        I have just obtained my <strong>Bachelor's degree in Computer Science</strong> from the IUT Informatique and am currently starting a <strong>Master Program on Embedded System for Signal, Image and Sound Processing</strong> at EUPI (Clermont-Ferrand 63). 🎓<br/>
                         </StyledText>
                         <StyledText>
-                        Outside of my studies and apprenticeship work, I am passionate about everything related to <strong>embedded systems</strong>, <strong>low-level and high-level programming languages</strong>, <strong>UNIX/Linux systems</strong>, and <strong>cybersecurity</strong>.<br/>
+                        Outside of my studies and apprenticeship work, I am passionate about everything related to <strong>embedded systems</strong>, <strong>low-level and high-level programming languages</strong>, <strong>UNIX/Linux systems</strong>, and <strong>cybersecurity</strong>. 💻<br/>
                         </StyledText>
                         <StyledText>
-                        I also devote a lot of time to <strong>bodybuilding</strong> and maintaining my personal well-being. I regularly work out at the gym and advocate for a balance between physical and mental well-being.<br/>
+                        I also devote a lot of time to <strong>bodybuilding</strong> and maintaining my personal well-being. I regularly work out at the gym and advocate for a balance between physical and mental well-being. 🏋️‍♂️<br/>
                         </StyledText>
                     </CustomContainerText>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
