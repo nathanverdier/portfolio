@@ -13,11 +13,17 @@ const APropos = () => {
                     <StyledH2 style={{ marginRight: '20px' }}>About me</StyledH2>
                     <MyAvatar imageUrl={myPicture} altText="Photo de profil" fallbackText="Photo de profil" />
                 </div>
-                     <CustomContainerText>
-                        <StyledText>Hello!</StyledText>
-                        <StyledText>I am currently finishing my 3rd year of a Bachelor's degree in Computer Science through an apprenticeship at Imaaagery. This experience has allowed me to dive into the professional world while deepening my knowledge in the field of computer science.</StyledText>
-                        <StyledText>Outside of my studies and apprenticeship work, I am passionate about everything related to embedded systems, low-level and high-level programming languages, UNIX/Linux systems, and cybersecurity.</StyledText>
-                        <StyledText>I also devote a lot of time to bodybuilding and maintaining personal well-being. I regularly engage in physical activity at the gym and advocate for well-being, both physical and mental.</StyledText>
+                    <CustomContainerText>
+                        <StyledText>Hello!<br /></StyledText>
+                        <StyledText>
+                        I have just obtained my <strong>Bachelor's degree in Computer Science</strong> from the IUT Informatique and am currently starting a <strong>Master's degree in SETSIS</strong> at EUPI (Clermont-Ferrand 63), specializing in embedded technologies, as well as image and sound processing.<br/>
+                        </StyledText>
+                        <StyledText>
+                        Outside of my studies and apprenticeship work, I am passionate about everything related to <strong>embedded systems</strong>, <strong>low-level and high-level programming languages</strong>, <strong>UNIX/Linux systems</strong>, and <strong>cybersecurity</strong>.<br/>
+                        </StyledText>
+                        <StyledText>
+                        I also devote a lot of time to <strong>bodybuilding</strong> and maintaining my personal well-being. I regularly work out at the gym and advocate for a balance between physical and mental well-being.<br/>
+                        </StyledText>
                     </CustomContainerText>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         <MyAvatar imageUrl={logoEtud} altText="Profile photo" fallbackText="Profile photo" />
