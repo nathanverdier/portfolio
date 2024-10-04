@@ -52,7 +52,7 @@ const APropos = () => {
                             <StyledText>Awarded the "Responsible Digital" prize during the "24h to undertake" event.</StyledText><br />
                         </CustomContainerText2>
                         <CustomContainerText2>
-                            <StyledText style={{ fontWeight: 'bold' }}>MASTER SETSIS</StyledText><br />
+                            <StyledText style={{ fontWeight: 'bold' }}>Master Program on Embedded System <br/> for Signal, Image and Sound Processing</StyledText><br />
                             <StyledText>September 2024 - Present</StyledText><br />
                             <StyledText>Embedded Systems(Microcontrollers, FPGA programming, C/C++, assembly language)</StyledText><br />
                             <StyledText>Machine Learning and AI for Embedded Systems</StyledText><br />
