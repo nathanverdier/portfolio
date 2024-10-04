@@ -48,7 +48,7 @@ const MesProjects = () => {
         </CustomContainerText>
 
         <Flex gap="3" mt="4" justify="center">
-            <a href="https://github.com/waarx11?tab=repositories" style={{ textDecoration: 'none' }}>
+            <a href="https://github.com/nathanverdier?tab=repositories" style={{ textDecoration: 'none' }}>
                 <Button variant="ghost">
                   See the rest of my projects
                 </Button>
