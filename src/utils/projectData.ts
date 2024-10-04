@@ -13,7 +13,7 @@ export const project1Data = {
     description: "Project made in Swift",
     descriptionLongue: "An iOS application of the DouShouQi board game",
     text: "Swift, SwiftUI, SpriteKit. Created within a team of three during my 3rd year of BUT, the application allows you to play the Chinese board game DouShouQi. It also lets you view the list of players you have created and their respective scores. The application was developed in Swift and uses the SpriteKit and SwiftUI libraries.",
-    url: "https://codefirst.iut.uca.fr/git/remi.regnault/DouShouQi_App"
+    url: "https://github.com/nathanverdier/DouShouQi_App"
 };
 
 export const project2Data = {
