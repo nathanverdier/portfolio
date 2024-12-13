@@ -1,6 +1,6 @@
 /* Réduisez la taille de la police par défaut */
 html {
-  font-size: 12px; /* Réduisez encore plus la taille de la police */
+  font-size: 10px; /* Réduisez encore plus la taille de la police */
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 #root {
   width: 100%; /* Utilisez 100% de la largeur de la fenêtre */
   margin: 0 auto;
-  padding: 0.5rem; /* Réduisez encore plus le padding */
+  padding: 1rem; /* Réduisez le padding */
   text-align: center;
   box-sizing: border-box; /* Assurez-vous que le padding et la bordure sont inclus dans la largeur */
 }
@@ -28,7 +28,7 @@ body {
 }
 
 .logo {
-  height: 3em; /* Réduisez encore plus la taille du logo */
+  height: 2em; /* Réduisez encore plus la taille du logo */
   padding: 0.5em; /* Réduisez encore plus le padding */
   will-change: filter;
   transition: filter 300ms;
@@ -76,7 +76,7 @@ body {
   }
 
   .logo {
-    height: 2em; /* Réduisez encore plus la taille du logo pour les petits écrans */
+    height: 1.5em; /* Réduisez encore plus la taille du logo pour les petits écrans */
     padding: 0.5em;
   }
 }
