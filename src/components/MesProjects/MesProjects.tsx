@@ -19,43 +19,43 @@ const MesProjects = () => {
   };
   
   return (
-    <Box id="projets" style={{background: 'var(--gray-a2)', width: '100%', borderRadius: '50px'}}>
-      <CustomContainer>
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-            <StyledH2 style={{ marginRight: '20px' }}>My projects</StyledH2>
-            <MyAvatar imageUrl={logoProjet} altText="Photo de profil" fallbackText="Photo de profil" />
-        </div>
+    <Box id="projets" style={{ background: 'var(--gray-a2)', width: '100%', borderRadius: '50px' }}>
+    <CustomContainer>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <StyledH2 style={{ marginRight: '20px' }}>My projects</StyledH2>
+        <MyAvatar imageUrl={logoProjet} altText="Photo de profil" fallbackText="Photo de profil" />
+      </div>
 
-        <CustomContainerText>
-          <Box pt="3" style={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
-            <MesProjectsContainer
-              onClick={() => handleOpenDialog(project1Data)}
-              data={project1Data}
-            />
+      <CustomContainerText>
+        <Box pt="3" style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
+          <MesProjectsContainer
+            onClick={() => handleOpenDialog(project1Data)}
+            data={project1Data}
+          />
 
-            <MesProjectsContainer
-              onClick={() => handleOpenDialog(project2Data)}
-              data={project2Data}
-            />
+          <MesProjectsContainer
+            onClick={() => handleOpenDialog(project2Data)}
+            data={project2Data}
+          />
 
-            <MesProjectsContainer
-              onClick={() => handleOpenDialog(project3Data)}
-              data={project3Data}
-            />
-            {/* Passer l'état du projet sélectionné à la prop `data` */}
-            {isDialogOpen && <ProjetPopup onClick={() => setIsDialogOpen(false)} data={selectedProject}/>}
-          </Box>
-        </CustomContainerText>
+          <MesProjectsContainer
+            onClick={() => handleOpenDialog(project3Data)}
+            data={project3Data}
+          />
+          {/* Passer l'état du projet sélectionné à la prop `data` */}
+          {isDialogOpen && <ProjetPopup onClick={() => setIsDialogOpen(false)} data={selectedProject} />}
+        </Box>
+      </CustomContainerText>
 
-        <Flex gap="3" mt="4" justify="center">
-            <a href="https://github.com/nathanverdier?tab=repositories" style={{ textDecoration: 'none' }}>
-                <Button variant="ghost">
-                  See the rest of my projects
-                </Button>
-            </a>
-        </Flex>
-      </CustomContainer>
-    </Box>
+      <Flex gap="3" mt="4" justify="center">
+        <a href="https://github.com/nathanverdier?tab=repositories" style={{ textDecoration: 'none' }}>
+          <Button variant="ghost">
+            See the rest of my projects
+          </Button>
+        </a>
+      </Flex>
+    </CustomContainer>
+  </Box>
   );
 };
 
