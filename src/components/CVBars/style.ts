@@ -3,6 +3,12 @@ import { Box, Container, Text, Table } from "@radix-ui/themes";
 
 export const StyledH2 = styled.h2`
     text-align: center;
+    line-height: 1.5; /* Line-height par défaut */
+
+    @media (max-width: 600px) {
+        font-size: 1.8rem; /* Réduisez légèrement la taille de la police pour les petits écrans */
+        line-height: 1.3; /* Réduisez légèrement l'interligne pour les petits écrans */
+    }
 `;
 
 export const StyledText = styled(Text)`
