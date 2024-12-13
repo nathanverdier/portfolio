@@ -21,6 +21,10 @@ export const StyledTabNavRoot = styled(TabNav.Root)`
     @media (max-width: 600px) {
         padding: 5px; /* Réduisez le padding pour les petits écrans */
         gap: 5px; /* Réduisez l'espace entre les éléments pour les petits écrans */
+
+        a {
+            font-size: 0.95rem; /* Réduisez légèrement la taille de la police pour les petits écrans */
+        }
     }
 
     a {
