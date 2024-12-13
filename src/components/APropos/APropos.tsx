@@ -29,39 +29,35 @@ const APropos = () => {
                         <MyAvatar imageUrl={logoEtud} altText="Profile photo" fallbackText="Profile photo" />
                         <StyledH2 style={{ marginLeft: '20px' }}>My Educational Background</StyledH2>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', gap: '20px' }}>
-                        <CustomContainerText2>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center', gap: '20px' }}>
+                        <CustomContainerText2 style={{ flexBasis: 'calc(50% - 20px)', boxSizing: 'border-box' }}>
                             <StyledText style={{ fontWeight: 'bold' }}>HIGH SCHOOL DIPLOMA (STI2D)</StyledText><br />
                             <StyledText>September 2018 - June 2020</StyledText><br />
                             <StyledText>Jean-Zay High School, Thiers (63)</StyledText><br />
                             <StyledText>Graduated with honors.</StyledText><br />
                         </CustomContainerText2>
-                        <CustomContainerText2>
+                        <CustomContainerText2 style={{ flexBasis: 'calc(50% - 20px)', boxSizing: 'border-box' }}>
                             <StyledText style={{ fontWeight: 'bold' }}>Computer Science Diploma, 2nd Cycle</StyledText><br />
                             <StyledText>January 2023 - July 2023</StyledText><br />
                             <StyledText>UQAC, Chicoutimi (Canada G7H 2B1)</StyledText><br />
                             <StyledText>Short program for undergraduate students on study abroad.</StyledText><br />
                         </CustomContainerText2>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', gap: '20px', marginTop: '30px' }}>
-                        <CustomContainerText2>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center', gap: '20px', marginTop: '30px' }}>
+                        <CustomContainerText2 style={{ flexBasis: 'calc(50% - 20px)', boxSizing: 'border-box' }}>
                             <StyledText style={{ fontWeight: 'bold' }}>University Bachelor of Technology in Computer Science</StyledText><br />
                             <StyledText>September 2021 - September 2024</StyledText><br />
                             <StyledText>IUT Informatique, Clermont-Ferrand (63)</StyledText><br />
                             <StyledText>University Diploma of Technology in Computer Science.</StyledText><br />
                             <StyledText>Awarded the "Responsible Digital" prize during the "24h to undertake" event.</StyledText><br />
                         </CustomContainerText2>
-                        <CustomContainerText2>
+                        <CustomContainerText2 style={{ flexBasis: 'calc(50% - 20px)', boxSizing: 'border-box' }}>
                             <StyledText style={{ fontWeight: 'bold' }}>Master Program on Embedded System <br/> for Signal, Image and Sound Processing</StyledText><br />
                             <StyledText>September 2024 - Present</StyledText><br />
                             <StyledText>Embedded Systems(Microcontrollers, FPGA programming, C/C++, assembly language)</StyledText><br />
                             <StyledText>Machine Learning and AI for Embedded Systems</StyledText><br />
                             <StyledText>Hardware-Software Integration</StyledText><br />
                             <StyledText>Signal and Image Processing</StyledText><br />
-
-                            
-
-
                         </CustomContainerText2>
                     </div>
             </CustomContainer>
