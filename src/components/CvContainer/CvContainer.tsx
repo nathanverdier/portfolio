@@ -1,5 +1,5 @@
-import { Avatar, Box, Flex } from "@radix-ui/themes";
-import { StyledFlex, StyledCard, StyledText } from "./style";
+import { Box, Flex } from "@radix-ui/themes";
+import { StyledFlex, StyledCard, StyledText, StyledAvatar } from "./style";
 
 interface CvContainerProps {
     imagesSource: string;
@@ -13,7 +13,7 @@ const CvContainer = ({ imagesSource, titre, date, description }: CvContainerProp
         <StyledFlex>
             <StyledCard>
                 <Flex gap="3" align="center">
-                    <Avatar
+                    <StyledAvatar
                         size="6"
                         src={imagesSource}
                         radius="full"
