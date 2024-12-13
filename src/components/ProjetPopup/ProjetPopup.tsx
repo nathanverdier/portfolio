@@ -1,4 +1,5 @@
 import { Button, Dialog, Flex, Text } from "@radix-ui/themes";
+import { StyledDialogContent, StyledImage, StyledDialogClose } from "./style";
 
 interface ProjetProps {
     data: {
@@ -21,22 +22,22 @@ const ProjetPopup = ({ data, onClick }: ProjetProps) => {
 
     return (
         <Dialog.Root open={true}>
-            <Dialog.Content maxWidth="850px" style={{ position: 'relative' }}>
-                <Dialog.Close onClick={onClick} style={{ position: 'absolute', top: '20px', right: '20px' }}>        
+            <StyledDialogContent>
+                <StyledDialogClose onClick={onClick}>
                     <Button variant="soft" color="red">
                         Close
                     </Button>
-                </Dialog.Close> 
+                </StyledDialogClose>
                 <Dialog.Title>{titre}</Dialog.Title>
                 <Dialog.Description size="2" mb="4">
-                    {descriptionLongue} 
+                    {descriptionLongue}
                 </Dialog.Description>
 
                 <Flex direction="column" gap="3">
-                    <img src={imagesSource} alt="Description" />
+                    <StyledImage src={imagesSource} alt="Description" />
                     <label>
                         <Text as="div" size="2" mb="1" weight="bold">
-                            {text} 
+                            {text}
                         </Text>
                     </label>
                 </Flex>
@@ -48,7 +49,7 @@ const ProjetPopup = ({ data, onClick }: ProjetProps) => {
                         </Button>
                     </a>
                 </Flex>
-            </Dialog.Content>
+            </StyledDialogContent>
         </Dialog.Root>
     );
 };
