@@ -31,9 +31,14 @@ const MainContainer = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
-    padding-top: 32px; /* Réduisez encore plus le padding */
-    padding-bottom: 32px; /* Réduisez encore plus le padding */
+    padding-top: 16px; /* Réduisez encore plus le padding */
+    padding-bottom: 16px; /* Réduisez encore plus le padding */
     box-sizing: border-box;
+
+    @media (max-width: 600px) {
+        padding-top: 8px; /* Réduisez encore plus le padding pour les petits écrans */
+        padding-bottom: 8px; /* Réduisez encore plus le padding pour les petits écrans */
+    }
 `;
 
 const MainContent = styled.div`
@@ -46,6 +51,12 @@ const MainContent = styled.div`
     max-width: 1280px; /* Appliquez une largeur maximale pour les écrans plus larges */
     padding: 8px; /* Réduisez encore plus le padding */
     box-sizing: border-box;
+	margin-top: 50px;
+	margin-bottom: 70px;
+
+    @media (max-width: 600px) {
+        padding: 4px; /* Réduisez encore plus le padding pour les petits écrans */
+    }
 `;
 
 export default App
