@@ -22,5 +22,9 @@ export const StyledTabNavRoot = styled(TabNav.Root)`
         & > * + * {
             margin-left: 10px; /* Réduisez la marge pour les petits écrans */
         }
+
+        a {
+            font-size: 0.9rem; /* Réduisez légèrement la taille de la police pour les petits écrans */
+        }
     }
 `;
