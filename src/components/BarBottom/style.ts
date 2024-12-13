@@ -12,4 +12,20 @@ export const StyledTabNavRoot = styled(TabNav.Root)`
     background-color: var(--mauve-6);
     border-radius: 4px;
     box-shadow: 0 2px 10px var(--black-a7);
-`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Ajoutez un espace entre les éléments */
+
+    @media (max-width: 600px) {
+        padding: 5px; /* Réduisez le padding pour les petits écrans */
+        gap: 5px; /* Réduisez l'espace entre les éléments pour les petits écrans */
+    }
+
+    a {
+        flex: 1 1 150px; /* Assurez-vous que les éléments prennent une largeur flexible */
+        text-align: center;
+        box-sizing: border-box;
+    }
+`;
