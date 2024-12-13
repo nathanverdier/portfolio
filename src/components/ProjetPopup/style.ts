@@ -1,18 +1,33 @@
-import { TabNav } from "@radix-ui/themes";
-import styled from "styled-components";
+import { styled } from "styled-components";
+import { Dialog } from "@radix-ui/themes";
 
-export const StyledTabNavRoot = styled(TabNav.Root)`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: #fff;
-    padding: 10px;
-    z-index: 1000;
-    background-color: var(--mauve-6);
-    border-radius: 4px;
-    box-shadow: 0 2px 10px var(--black-a7);
-    & > * + * {
-        margin-left: 20px; // Adjust the margin value as needed
+export const StyledDialogContent = styled(Dialog.Content)`
+    max-width: 850px;
+    position: relative;
+    padding: 20px;
+
+    @media (max-width: 600px) {
+        max-width: 90%; /* Réduisez la largeur maximale pour les petits écrans */
+        padding: 10px; /* Réduisez le padding pour les petits écrans */
+    }
+`;
+
+export const StyledImage = styled.img`
+    max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur */
+    height: auto; /* Maintenez le ratio d'aspect de l'image */
+
+    @media (max-width: 600px) {
+        max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur pour les petits écrans */
+    }
+`;
+
+export const StyledDialogClose = styled(Dialog.Close)`
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    @media (max-width: 600px) {
+        top: 10px; /* Ajustez la position du bouton "Close" pour les petits écrans */
+        right: 10px; /* Ajustez la position du bouton "Close" pour les petits écrans */
     }
 `;
