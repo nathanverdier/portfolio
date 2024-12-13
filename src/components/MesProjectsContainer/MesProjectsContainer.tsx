@@ -14,7 +14,7 @@ interface CvContainerProps {
 const MesProjectsContainer = ({onClick, data} : CvContainerProps) => {
 
     return(
-        <Box style={{ width: '100%'}}>
+        <Box style={{ flex: '1 1 calc(33% - 20px)', boxSizing: 'border-box' }}>
         <CustomContainer>
             <CustomContainerText>
                 <Box maxWidth="240px">
