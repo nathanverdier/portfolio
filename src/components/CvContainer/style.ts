@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { Card, Flex, Text } from "@radix-ui/themes";
+import { Avatar, Card, Flex, Text } from "@radix-ui/themes";
 
 interface StyledTextProps {
     bold?: boolean;
@@ -30,5 +30,12 @@ export const StyledText = styled(Text)<StyledTextProps>`
 
     @media (max-width: 600px) {
         font-size: 0.9rem; /* Réduisez légèrement la taille de la police pour les petits écrans */
+    }
+`;
+
+export const StyledAvatar = styled(Avatar)`
+    @media (max-width: 600px) {
+        width: 40px; /* Réduisez la largeur de l'avatar pour les petits écrans */
+        height: 40px; /* Réduisez la hauteur de l'avatar pour les petits écrans */
     }
 `;
