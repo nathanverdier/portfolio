@@ -12,7 +12,15 @@ export const StyledTabNavRoot = styled(TabNav.Root)`
     background-color: var(--mauve-6);
     border-radius: 4px;
     box-shadow: 0 2px 10px var(--black-a7);
+
     & > * + * {
-        margin-left: 20px; // Adjust the margin value as needed
+        margin-left: 20px; /* Ajustez la valeur de la marge si nécessaire */
+    }
+
+    @media (max-width: 600px) {
+        padding: 5px; /* Réduisez le padding pour les petits écrans */
+        & > * + * {
+            margin-left: 10px; /* Réduisez la marge pour les petits écrans */
+        }
     }
 `;
