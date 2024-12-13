@@ -1,8 +1,14 @@
 #root {
-  max-width: 1280px;
+  max-width: 100vw; /* Utilisez 100% de la largeur de la fenêtre */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+@media (min-width: 1280px) {
+  #root {
+    max-width: 1280px; /* Appliquez la largeur maximale de 1280px pour les écrans plus larges */
+  }
 }
 
 .logo {
