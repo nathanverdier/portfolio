@@ -1,8 +1,24 @@
+/* Réduisez la taille de la police par défaut */
+html {
+  font-size: 12px; /* Réduisez encore plus la taille de la police */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+  overflow-y: auto; /* Assurez le défilement vertical */
+  box-sizing: border-box; /* Assurez-vous que le padding et la bordure sont inclus dans la largeur et la hauteur */
+}
+
 #root {
-  max-width: 100vw; /* Utilisez 100% de la largeur de la fenêtre */
+  width: 100%; /* Utilisez 100% de la largeur de la fenêtre */
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0.5rem; /* Réduisez encore plus le padding */
   text-align: center;
+  box-sizing: border-box; /* Assurez-vous que le padding et la bordure sont inclus dans la largeur */
 }
 
 @media (min-width: 1280px) {
@@ -12,14 +28,16 @@
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 3em; /* Réduisez encore plus la taille du logo */
+  padding: 0.5em; /* Réduisez encore plus le padding */
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -40,9 +58,25 @@
 }
 
 .card {
-  padding: 2em;
+  padding: 1em; /* Réduisez le padding */
 }
 
 .read-the-docs {
   color: #888;
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 600px) {
+  #root {
+    padding: 0.5rem; /* Réduisez encore plus le padding pour les petits écrans */
+  }
+
+  .card {
+    padding: 0.5rem; /* Réduisez encore plus le padding pour les cartes sur les petits écrans */
+  }
+
+  .logo {
+    height: 2em; /* Réduisez encore plus la taille du logo pour les petits écrans */
+    padding: 0.5em;
+  }
 }
