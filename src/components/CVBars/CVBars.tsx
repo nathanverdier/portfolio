@@ -87,71 +87,70 @@ const CVBars = () => {
               <StyledH2 style={{ marginLeft: '20px' }}>My skills</StyledH2>
             </div>
             <Table.Root>
-              <Table.Header>
-                <CustomRow>
-                  <CustomCellTop>Web Languages</CustomCellTop>
-                  <CustomCellTop>Programming Languages</CustomCellTop>
-                  <CustomCellTop>Database Languages</CustomCellTop>
-                </CustomRow>
-              </Table.Header>
+                <Table.Header>
+                    <CustomRow>
+                        <CustomCellTop>Web Languages</CustomCellTop>
+                        <CustomCellTop>Programming Languages</CustomCellTop>
+                        <CustomCellTop>Database Languages</CustomCellTop>
+                    </CustomRow>
+                </Table.Header>
 
-              <Table.Body>
-                <CustomRow>
-                  <CustomCell><img src={htmlCssJS} alt="CSS Logo" style={{width: '80px', height: '42px', verticalAlign: 'center'}}/></CustomCell>
-                  <CustomCell><img src={CLogo} alt="C Logo" style={{width: '30px', height: '30px'}}/></CustomCell>
-                  <CustomCell><img src={sqlLogo} alt="SQL Logo" style={{width: '55px', height: '30px'}}/></CustomCell>
-                </CustomRow>
+                <Table.Body>
+                    <CustomRow>
+                        <CustomCell><img src={htmlCssJS} alt="CSS Logo" style={{ width: '80px', height: '42px', verticalAlign: 'center' }} /></CustomCell>
+                        <CustomCell><img src={CLogo} alt="C Logo" style={{ width: '30px', height: '30px' }} /></CustomCell>
+                        <CustomCell><img src={sqlLogo} alt="SQL Logo" style={{ width: '55px', height: '30px' }} /></CustomCell>
+                    </CustomRow>
 
-                <CustomRow>
-                  <CustomCell><img src={phpLogo} alt="cSharp Logo" style={{width: '60px', height: '35px'}}/></CustomCell>
-                  <CustomCell><img src={CPlusLogo} alt="C++ Logo" style={{width: '30px', height: '30px'}}/></CustomCell>
-                  <CustomCell><img src={psqlLogo} alt="PostgreSQL Logo" style={{width: '105px', height: '50px'}}/></CustomCell>
-                </CustomRow>
+                    <CustomRow>
+                        <CustomCell><img src={phpLogo} alt="cSharp Logo" style={{ width: '60px', height: '35px' }} /></CustomCell>
+                        <CustomCell><img src={CPlusLogo} alt="C++ Logo" style={{ width: '30px', height: '30px' }} /></CustomCell>
+                        <CustomCell><img src={psqlLogo} alt="PostgreSQL Logo" style={{ width: '105px', height: '50px' }} /></CustomCell>
+                    </CustomRow>
 
-                <CustomRow>
-                  <CustomCell><img src={reactLogo} alt="cSharp Logo" style={{width: '85px', height: '45px'}}/></CustomCell>
-                  <CustomCell><img src={cSharpLogo} alt="cSharp Logo" style={{width: '30px', height: '30px'}}/></CustomCell>
-                  <CustomCell><img src={mongoLogo} alt="MongoDB Logo" style={{width: '120px', height: '30px'}}/></CustomCell>
-                </CustomRow>
+                    <CustomRow>
+                        <CustomCell><img src={reactLogo} alt="cSharp Logo" style={{ width: '85px', height: '45px' }} /></CustomCell>
+                        <CustomCell><img src={cSharpLogo} alt="cSharp Logo" style={{ width: '30px', height: '30px' }} /></CustomCell>
+                        <CustomCell><img src={mongoLogo} alt="MongoDB Logo" style={{ width: '120px', height: '30px' }} /></CustomCell>
+                    </CustomRow>
 
-                <CustomRow>
-                <CustomCell><img src={logoTs} alt="Ts logo" style={{width: '10', height: '40px'}}/></CustomCell>
-                  <CustomCell><img src={shelLogo} alt="cSharp Logo" style={{width: '30px', height: '30px'}}/></CustomCell>
-                  <CustomCell></CustomCell>
-                </CustomRow>
+                    <CustomRow>
+                        <CustomCell><img src={logoTs} alt="Ts logo" style={{ width: '40px', height: '40px' }} /></CustomCell>
+                        <CustomCell><img src={shelLogo} alt="cSharp Logo" style={{ width: '30px', height: '30px' }} /></CustomCell>
+                        <CustomCell></CustomCell>
+                    </CustomRow>
 
-                <CustomRow>
-                  <CustomCell></CustomCell>
-                  <CustomCell><img src={bashLogo} alt="cSharp Logo" style={{width: '30px', height: '30px'}}/></CustomCell>
-                  <CustomCell></CustomCell>
-                </CustomRow>
+                    <CustomRow>
+                        <CustomCell></CustomCell>
+                        <CustomCell><img src={bashLogo} alt="cSharp Logo" style={{ width: '30px', height: '30px' }} /></CustomCell>
+                        <CustomCell></CustomCell>
+                    </CustomRow>
 
-                <CustomRow>
-                  <CustomCell></CustomCell>
-                  <CustomCell><img src={javaLogo} alt="Java Logo" style={{width: '105px', height: '40px'}}/></CustomCell>
-                  <CustomCell></CustomCell>
-                </CustomRow>
+                    <CustomRow>
+                        <CustomCell></CustomCell>
+                        <CustomCell><img src={javaLogo} alt="Java Logo" style={{ width: '105px', height: '40px' }} /></CustomCell>
+                        <CustomCell></CustomCell>
+                    </CustomRow>
 
-                <CustomRow>
-                  <CustomCell></CustomCell>
-                  <CustomCell><img src={kotlinLogo} alt="cSharp Logo" style={{width: '120px', height: '30px'}}/></CustomCell>
-                  <CustomCell></CustomCell>
-                </CustomRow>
+                    <CustomRow>
+                        <CustomCell></CustomCell>
+                        <CustomCell><img src={kotlinLogo} alt="cSharp Logo" style={{ width: '120px', height: '30px' }} /></CustomCell>
+                        <CustomCell></CustomCell>
+                    </CustomRow>
 
-                <CustomRow>
-                  <CustomCell></CustomCell>
-                  <CustomCell><img src={logoPython} alt="python Logo" style={{width: '120px', height: '30px'}}/></CustomCell>
-                  <CustomCell></CustomCell>
-                </CustomRow>
+                    <CustomRow>
+                        <CustomCell></CustomCell>
+                        <CustomCell><img src={logoPython} alt="python Logo" style={{ width: '120px', height: '30px' }} /></CustomCell>
+                        <CustomCell></CustomCell>
+                    </CustomRow>
 
-                <CustomRow>
-                  <CustomCell></CustomCell>
-                  <CustomCell><img src={logoSwift} alt="swift Logo" style={{width: '90px', height: '30px'}}/></CustomCell>
-                  <CustomCell></CustomCell>
+                    <CustomRow>
+                        <CustomCell></CustomCell>
+                        <CustomCell><img src={logoSwift} alt="swift Logo" style={{ width: '90px', height: '30px' }} /></CustomCell>
+                        <CustomCell></CustomCell>
                 </CustomRow>
-                              </Table.Body>
+              </Table.Body>
             </Table.Root>
-
             </Tabs.Content>
           </Box>
         </Tabs.Root>
