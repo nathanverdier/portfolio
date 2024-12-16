@@ -26,5 +26,9 @@ export const StyledText = styled(Text)`
     z-index: 2;
     color: white;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.5rem;
+
+    @media (max-width: 600px) {
+        font-size: 2rem; /* Réduisez légèrement la taille de la police pour les petits écrans */
+    }
 `;
