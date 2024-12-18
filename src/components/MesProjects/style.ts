@@ -30,10 +30,25 @@ export const CustomContainerText = styled(Container)`
 `;
 
 export const CustomBox = styled(Box)`
-    background: 'blue';
-    border-radius: 'var(--radius-3)';
+    background: blue;
+    border-radius: var(--radius-3);
     width: 100%;
     max-width: 100%;
 `;
 
-        
+export const ProjectsBox = styled(Box)`
+    background: var(--gray-a2);
+    width: 100%;
+    border-radius: 50px;
+`;
+
+export const ProjectsContainer = styled(Box)`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+    @media (max-width: 600px) {
+        gap: 0px; /* Réduisez l'écart entre les éléments pour les petits écrans */
+    }
+`;
