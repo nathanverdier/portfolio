@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { Avatar, Box, Card, Container, Text } from "@radix-ui/themes";
+import { Avatar, Card, Container, Text } from "@radix-ui/themes";
 
 export const CustomContainer = styled(Container)`
     width: 100%;
@@ -18,8 +18,13 @@ export const CustomContainerText = styled(Container)`
     padding: 20px;
     border-radius: 50px;
 
-    @media (max-width: 600px) {
+    @media (max-width: 610px) {
         padding: 15px; /* Réduisez légèrement le padding pour les petits écrans */
+        border-radius: 45px; /* Réduisez légèrement le rayon de bordure pour les petits écrans */
+    }
+
+    @media (max-width: 400px) {
+        padding: 5px; /* Réduisez légèrement le padding pour les petits écrans */
         border-radius: 45px; /* Réduisez légèrement le rayon de bordure pour les petits écrans */
     }
 `;
