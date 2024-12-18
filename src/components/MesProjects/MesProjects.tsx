@@ -17,7 +17,7 @@ const MesProjects = () => {
   };
   
   return (
-    <Box id="projets" className="projects-box">
+    <Box id="projets" style={{ background: 'var(--gray-a2)', width: '100%', borderRadius: '50px' }}>
       <CustomContainer>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <StyledH2 style={{ marginRight: '20px' }}>My projects</StyledH2>
