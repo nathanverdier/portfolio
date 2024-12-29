@@ -3,7 +3,7 @@ import { Box, Button, Flex } from "@radix-ui/themes";
 import { CustomContainer, CustomContainerText, StyledH2, ProjectsContainer } from "./style";
 import { MesProjectsContainer } from "../MesProjectsContainer";
 import { ProjetPopup } from "../ProjetPopup";
-import { project1Data, project2Data, project3Data } from "../../utils/projectData";
+import { project1Data, project2Data, project3Data, project4Data, project5Data, project6Data, project7Data, project8Data, project9Data } from "../../utils/projectData";
 import MyAvatar from "../MyAvatar/MyAvatar";
 import logoProjet from '../../assets/logoGithub.png';
 
@@ -39,6 +39,42 @@ const MesProjects = () => {
             <MesProjectsContainer
               onClick={() => handleOpenDialog(project3Data)}
               data={project3Data}
+            />
+            {isDialogOpen && <ProjetPopup onClick={() => setIsDialogOpen(false)} data={selectedProject} />}
+          </ProjectsContainer>
+          
+          <ProjectsContainer pt="3">
+            <MesProjectsContainer
+              onClick={() => handleOpenDialog(project4Data)}
+              data={project4Data}
+            />
+
+            <MesProjectsContainer
+              onClick={() => handleOpenDialog(project5Data)}
+              data={project5Data}
+            />
+
+            <MesProjectsContainer
+              onClick={() => handleOpenDialog(project6Data)}
+              data={project6Data}
+            />
+            {isDialogOpen && <ProjetPopup onClick={() => setIsDialogOpen(false)} data={selectedProject} />}
+          </ProjectsContainer>
+          
+          <ProjectsContainer pt="3">
+            <MesProjectsContainer
+              onClick={() => handleOpenDialog(project7Data)}
+              data={project7Data}
+            />
+
+            <MesProjectsContainer
+              onClick={() => handleOpenDialog(project8Data)}
+              data={project8Data}
+            />
+
+            <MesProjectsContainer
+              onClick={() => handleOpenDialog(project9Data)}
+              data={project9Data}
             />
             {isDialogOpen && <ProjetPopup onClick={() => setIsDialogOpen(false)} data={selectedProject} />}
           </ProjectsContainer>
