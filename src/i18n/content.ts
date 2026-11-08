@@ -38,13 +38,13 @@ const fr: Content = {
         label: 'Série TryHackMe',
         value: String(THM_STREAK_DAYS),
         unit: 'jours',
-        caption: 'Plus longue série d’activité, entraînement quotidien depuis un an',
+        caption: 'Jours d’activité consécutifs, sans interruption',
       },
       {
         label: 'Série Hack The Box',
         value: String(HTB_STREAK_WEEKS),
         unit: 'semaines',
-        caption: 'Academy : parcours Junior Cybersecurity Analyst',
+        caption: 'Semaines d’activité consécutives, sans interruption',
       },
       {
         label: 'Hackathon du CND 2025',
@@ -62,7 +62,7 @@ const fr: Content = {
     title: 'Profil',
     paragraphs: [
       'Je suis élève-ingénieur en informatique à l’ESIEA, en majeure cybersécurité, et je travaille en alternance chez IMAAAGERY, une entreprise d’intelligence artificielle pour la cosmétique à Clermont-Ferrand. J’y mène la mise en conformité ISO 27001:2022 et la conception d’une architecture sécurisée, et je développe des pipelines de machine learning pour l’analyse d’images.',
-      'Je m’entraîne tous les jours sur Hack The Box et TryHackMe depuis un an, après avoir commencé par la sécurité web sur Root-Me. J’aime aussi descendre au niveau du matériel : systèmes embarqués, Linux, hardware hacking.',
+      'Je m’entraîne tous les jours sur Hack The Box et TryHackMe, après avoir commencé par la sécurité web sur Root-Me. J’aime aussi descendre au niveau du matériel : systèmes embarqués, Linux, hardware hacking.',
       'Hors écran, je fais de la musculation depuis dix ans, un peu de tennis et de la guitare.',
     ],
     pillarsTitle: 'Domaines d’intervention',
@@ -74,7 +74,7 @@ const fr: Content = {
       },
       {
         name: 'Sécurité offensive',
-        text: 'Pratique quotidienne depuis un an : web, réseau et systèmes. Top 2 % sur TryHackMe, 4e au hackathon du CND 2025.',
+        text: 'Pratique quotidienne sur des défis web, réseau et système.',
         tags: ['Hack The Box', 'TryHackMe', 'Root-Me', 'Burp Suite', 'Injections SQL', 'XSS'],
       },
       {
@@ -99,7 +99,7 @@ const fr: Content = {
       {
         dates: 'Depuis avr. 2025',
         current: true,
-        title: 'Ingénieur cybersécurité et machine learning, en alternance',
+        title: 'Alternant en cybersécurité et machine learning',
         org: 'IMAAAGERY',
         place: 'Clermont-Ferrand',
         bullets: [
@@ -152,11 +152,11 @@ const fr: Content = {
         current: true,
         title: 'Diplôme d’ingénieur, majeure cybersécurité (5e année)',
         org: 'ESIEA',
-        text: 'Méthodologie de la sécurité (ENT5003), sécurité des réseaux locaux, pare-feu et proxy, audit, forensic. Projet de recherche qoracle.',
+        text: 'Méthodologie de la sécurité (ENT5003), sécurité des réseaux locaux, pare-feu et proxy, audit, forensic. Projet de recherche Qoracle.',
       },
       {
         dates: '2024 – 2025',
-        title: 'Master Systèmes embarqués pour le traitement du signal, de l’image et du son',
+        title: 'Master 1 Systèmes embarqués pour le traitement du signal, de l’image et du son',
         org: 'Université Clermont Auvergne, EUPI',
         place: 'Clermont-Ferrand',
         text: 'Systèmes embarqués (microcontrôleurs, FPGA, C/C++, assembleur), machine learning et IA embarqués, intégration matériel-logiciel, traitement du signal et de l’image.',
@@ -198,11 +198,11 @@ const fr: Content = {
   },
   training: {
     title: 'Entraînement',
-    intro: 'Pratique quotidienne depuis un an, en plus des cours et de l’alternance.',
+    intro: 'Pratique quotidienne, en plus des cours et de l’alternance.',
     items: [
       {
         term: 'TryHackMe',
-        detail: `Top 2 % du classement, ligue Gold, série de ${THM_STREAK_DAYS} jours. Parcours Pre Security et Cyber Security 101 terminés ; AI Security en cours (59 %), SOC Level 1 et Junior Penetration Tester entamés.`,
+        detail: `Top 2 % du classement, ligue Gold, série de ${THM_STREAK_DAYS} jours sans interruption. Parcours Pre Security et Cyber Security 101 terminés ; AI Security en cours (59 %), SOC Level 1 et Junior Penetration Tester entamés.`,
         href: TRYHACKME,
       },
       {
@@ -347,7 +347,7 @@ const fr: Content = {
   },
   contact: {
     title: 'Contact',
-    text: 'Une question, une opportunité ou un projet à discuter : écris-moi.',
+    text: 'Une question, une opportunité ou un projet à discuter ? Écris-moi.',
     copy: 'Copier',
     copied: 'Copié',
     items: [
@@ -364,7 +364,7 @@ const en: Content = {
   meta: {
     title: 'Nathan Verdier, computer engineering student, cybersecurity major',
     description:
-      'Portfolio of Nathan Verdier: computer engineering student at ESIEA, cybersecurity major (ISO 27001, EBIOS RM, penetration testing), machine learning and embedded systems. Work-study at IMAAAGERY.',
+      'Portfolio of Nathan Verdier: computer engineering student at ESIEA, cybersecurity major (ISO 27001, EBIOS RM, penetration testing), machine learning and embedded systems. Apprenticeship at IMAAAGERY.',
   },
   skip: 'Skip to content',
   nav: {
@@ -383,7 +383,7 @@ const en: Content = {
   hero: {
     role: 'Computer engineering student, cybersecurity major',
     school: 'ESIEA, 5th year',
-    status: 'Work-study at IMAAAGERY, Clermont-Ferrand',
+    status: 'Apprenticeship at IMAAAGERY, Clermont-Ferrand',
     line: 'I design and secure systems: ISO 27001 compliance, infrastructure, penetration testing and machine learning.',
     metrics: [
       {
@@ -396,13 +396,13 @@ const en: Content = {
         label: 'TryHackMe streak',
         value: String(THM_STREAK_DAYS),
         unit: 'days',
-        caption: 'Longest activity streak, daily training for a year',
+        caption: 'Consecutive days of activity, without a break',
       },
       {
         label: 'Hack The Box streak',
         value: String(HTB_STREAK_WEEKS),
         unit: 'weeks',
-        caption: 'Academy: Junior Cybersecurity Analyst path',
+        caption: 'Consecutive weeks of activity, without a break',
       },
       {
         label: 'CND 2025 hackathon',
@@ -419,8 +419,8 @@ const en: Content = {
   about: {
     title: 'Profile',
     paragraphs: [
-      'I’m a computer engineering student at ESIEA with a cybersecurity major, on a work-study programme at IMAAAGERY, an AI company for cosmetics in Clermont-Ferrand. There I lead the ISO 27001:2022 compliance work and the design of a secure architecture, and I build machine learning pipelines for image analysis.',
-      'I’ve trained every day on Hack The Box and TryHackMe for a year, after starting with web security on Root-Me. I also like going down to the hardware level: embedded systems, Linux, hardware hacking.',
+      'I’m a computer engineering student at ESIEA with a cybersecurity major, on an apprenticeship at IMAAAGERY, an AI company for cosmetics in Clermont-Ferrand. There I lead the ISO 27001:2022 compliance work and the design of a secure architecture, and I build machine learning pipelines for image analysis.',
+      'I train every day on Hack The Box and TryHackMe, after starting with web security on Root-Me. I also like going down to the hardware level: embedded systems, Linux, hardware hacking.',
       'Away from the screen: weight training for ten years, some tennis and guitar.',
     ],
     pillarsTitle: 'Areas of work',
@@ -432,7 +432,7 @@ const en: Content = {
       },
       {
         name: 'Offensive security',
-        text: 'Daily practice for a year: web, network and systems. Top 2% on TryHackMe, 4th at the CND 2025 hackathon.',
+        text: 'Daily practice on web, network and system challenges.',
         tags: ['Hack The Box', 'TryHackMe', 'Root-Me', 'Burp Suite', 'SQL injection', 'XSS'],
       },
       {
@@ -457,7 +457,7 @@ const en: Content = {
       {
         dates: 'Since Apr 2025',
         current: true,
-        title: 'Cybersecurity and machine learning engineer (work-study)',
+        title: 'Cybersecurity and machine learning apprentice',
         org: 'IMAAAGERY',
         place: 'Clermont-Ferrand, France',
         bullets: [
@@ -485,7 +485,7 @@ const en: Content = {
       },
       {
         dates: 'Sep 2023 – Sep 2024',
-        title: 'Work-study in web, machine learning and deep learning',
+        title: 'Apprenticeship in web, machine learning and deep learning',
         org: 'IMAAAGERY',
         place: 'Clermont-Ferrand, France',
         bullets: [
@@ -510,11 +510,11 @@ const en: Content = {
         current: true,
         title: 'Engineering degree, cybersecurity major (5th year)',
         org: 'ESIEA',
-        text: 'Security methodology (ENT5003), local network security, firewalls and proxies, auditing, forensics. Research project qoracle.',
+        text: 'Security methodology (ENT5003), local network security, firewalls and proxies, auditing, forensics. Research project Qoracle.',
       },
       {
         dates: '2024 – 2025',
-        title: 'Master’s in embedded systems for signal, image and sound processing',
+        title: 'M1 Master’s in embedded systems for signal, image and sound processing',
         org: 'Université Clermont Auvergne, EUPI',
         place: 'Clermont-Ferrand, France',
         text: 'Embedded systems (microcontrollers, FPGA, C/C++, assembly), machine learning and AI for embedded systems, hardware-software integration, signal and image processing.',
@@ -524,7 +524,7 @@ const en: Content = {
         title: 'Bachelor of Technology in Computer Science (BUT)',
         org: 'IUT Informatique, Université Clermont Auvergne',
         place: 'Clermont-Ferrand, France',
-        text: '“Responsible Digital” prize at the “24h to undertake” event.',
+        text: '“Numérique responsable” (responsible digital) award at the “24h pour entreprendre” event.',
       },
       {
         dates: 'Jan – Jun 2023',
@@ -556,16 +556,16 @@ const en: Content = {
   },
   training: {
     title: 'Training',
-    intro: 'Daily practice for a year, on top of classes and work-study.',
+    intro: 'Daily practice, on top of classes and the apprenticeship.',
     items: [
       {
         term: 'TryHackMe',
-        detail: `Top 2% of the ranking, Gold league, ${THM_STREAK_DAYS}-day streak. Pre Security and Cyber Security 101 paths completed; AI Security in progress (59%), SOC Level 1 and Junior Penetration Tester started.`,
+        detail: `Top 2% of the ranking, Gold league, ${THM_STREAK_DAYS}-day streak without a break. Pre Security and Cyber Security 101 paths completed; AI Security in progress (59%), SOC Level 1 and Junior Penetration Tester started.`,
         href: TRYHACKME,
       },
       {
         term: 'Hack The Box',
-        detail: `Academy: Junior Cybersecurity Analyst path at 89% (16 of 20 modules), preparing the CJCA certification, level 42, ${HTB_STREAK_WEEKS} consecutive weeks of activity. Labs alongside.`,
+        detail: `Academy: Junior Cybersecurity Analyst path at 89% (16 of 20 modules), preparing the CJCA certification, level 42, ${HTB_STREAK_WEEKS} consecutive weeks of activity. Labs as well.`,
         href: HACKTHEBOX,
       },
       {
@@ -611,7 +611,7 @@ const en: Content = {
       },
       {
         term: '“Responsible Digital” prize',
-        detail: 'Awarded at the “24h to undertake” event.',
+        detail: 'Awarded at the “24h pour entreprendre” event.',
         tag: { label: 'Award', tone: 'warn' },
       },
     ],
@@ -705,7 +705,7 @@ const en: Content = {
   },
   contact: {
     title: 'Contact',
-    text: 'A question, an opportunity or a project to discuss: write to me.',
+    text: 'Have a question, an opportunity or a project to discuss? Write to me.',
     copy: 'Copy',
     copied: 'Copied',
     items: [

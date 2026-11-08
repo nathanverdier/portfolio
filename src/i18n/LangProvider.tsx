@@ -8,9 +8,10 @@ function detectLang(): Lang {
     const saved = localStorage.getItem('lang')
     if (saved && (LANGS as readonly string[]).includes(saved)) return saved as Lang
   } catch {
-    // Stockage indisponible (navigation privée, par exemple) : on retombe sur la langue du navigateur.
+    // Stockage indisponible (navigation privée, par exemple) : on retombe sur la langue par défaut.
   }
-  return navigator.language.toLowerCase().startsWith('fr') ? 'fr' : 'en'
+  // Anglais par défaut : le français reste à un clic, et le choix est ensuite mémorisé.
+  return 'en'
 }
 
 export function LangProvider({ children }: { children: ReactNode }) {
