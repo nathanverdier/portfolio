@@ -1,62 +1,36 @@
-import './App.css'
-import { Navbar } from './components/Navbar'
-import styled from 'styled-components';
-import '@radix-ui/themes/styles.css';
-import { CVBars } from './components/CVBars';
-import { TopContainer } from './components/TopContainer';
-import { BarBottom } from './components/BarBottom';
-import APropos from './components/APropos/APropos';
-import { MesProjects } from './components/MesProjects';
+import { Career } from './components/Career'
+import { Header } from './components/Header'
+import { Hero } from './components/Hero'
+import { Projects } from './components/Projects'
+import { About, Certifications, Contact, Skills, Training } from './components/Sections'
+import { useLang } from './i18n/LangContext'
 
-function App() {
-    return (
-        <MainContainer>
-            <Navbar/>
-            <MainContent>
-                <TopContainer/>
-                <APropos/>
-                <CVBars/>
-                <MesProjects/>
-            </MainContent>
-            <BarBottom/>
-        </MainContainer>
-    );
+export default function App() {
+  const { t } = useLang()
+
+  return (
+    <>
+      <a className="skip" href="#main">
+        {t.skip}
+      </a>
+      <Header />
+      <div className="container">
+        <main id="main">
+          <Hero />
+          <About />
+          <Career />
+          <Certifications />
+          <Training />
+          <Projects />
+          <Skills />
+          <Contact />
+          <footer className="footer">
+            <p>
+              © {new Date().getFullYear()} {t.footer.rights}
+            </p>
+          </footer>
+        </main>
+      </div>
+    </>
+  )
 }
-
-const MainContainer = styled.div`
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding-top: 16px; /* Réduisez encore plus le padding */
-    padding-bottom: 16px; /* Réduisez encore plus le padding */
-    box-sizing: border-box;
-
-    @media (max-width: 600px) {
-        padding-top: 8px; /* Réduisez encore plus le padding pour les petits écrans */
-        padding-bottom: 8px; /* Réduisez encore plus le padding pour les petits écrans */
-    }
-`;
-
-const MainContent = styled.div`
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    max-width: 1280px; /* Appliquez une largeur maximale pour les écrans plus larges */
-    padding: 8px; /* Réduisez encore plus le padding */
-    box-sizing: border-box;
-	margin-top: 50px;
-	margin-bottom: 70px;
-
-    @media (max-width: 600px) {
-        padding: 4px; /* Réduisez encore plus le padding pour les petits écrans */
-    }
-`;
-
-export default App
