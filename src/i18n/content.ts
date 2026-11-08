@@ -1,5 +1,5 @@
 import { HTB_STREAK_WEEKS, THM_STREAK_DAYS } from '../data/stats'
-import { CV_URL, EMAIL, GITHUB, HACKTHEBOX, LINKEDIN, ROOTME, TRYHACKME } from '../data/links'
+import { CV_URL, CV_URL_EN, EMAIL, GITHUB, HACKTHEBOX, LINKEDIN, ROOTME, TRYHACKME } from '../data/links'
 import type { Content, Lang } from './types'
 
 const fr: Content = {
@@ -44,7 +44,7 @@ const fr: Content = {
         label: 'Série Hack The Box',
         value: String(HTB_STREAK_WEEKS),
         unit: 'semaines',
-        caption: 'Academy : Junior Cybersecurity Analyst à 89 % (16 modules sur 20)',
+        caption: 'Academy : parcours Junior Cybersecurity Analyst',
       },
       {
         label: 'Hackathon du CND 2025',
@@ -54,6 +54,7 @@ const fr: Content = {
       },
     ],
     downloadCv: 'Télécharger le CV',
+    cvUrl: CV_URL,
     contact: 'Me contacter',
     portraitAlt: 'Portrait de Nathan Verdier',
   },
@@ -353,7 +354,7 @@ const fr: Content = {
       { term: 'E-mail', detail: EMAIL, href: `mailto:${EMAIL}`, copy: true },
       { term: 'LinkedIn', detail: 'nathan-verdier', href: LINKEDIN },
       { term: 'GitHub', detail: 'nathanverdier', href: GITHUB },
-      { term: 'CV', detail: 'Télécharger le CV (PDF, 1 page)', href: CV_URL },
+      { term: 'CV', detail: 'Télécharger le CV (PDF)', href: CV_URL },
     ],
   },
   footer: { rights: 'Nathan Verdier. Site réalisé avec React et Vite.' },
@@ -401,7 +402,7 @@ const en: Content = {
         label: 'Hack The Box streak',
         value: String(HTB_STREAK_WEEKS),
         unit: 'weeks',
-        caption: 'Academy: Junior Cybersecurity Analyst path at 89% (16 of 20 modules)',
+        caption: 'Academy: Junior Cybersecurity Analyst path',
       },
       {
         label: 'CND 2025 hackathon',
@@ -411,6 +412,7 @@ const en: Content = {
       },
     ],
     downloadCv: 'Download my CV',
+    cvUrl: CV_URL_EN,
     contact: 'Get in touch',
     portraitAlt: 'Portrait of Nathan Verdier',
   },
@@ -712,8 +714,8 @@ const en: Content = {
       { term: 'GitHub', detail: 'nathanverdier', href: GITHUB },
       {
         term: 'CV',
-        detail: 'Download my CV (PDF, 1 page, in French)',
-        href: CV_URL,
+        detail: 'Download my CV (PDF)',
+        href: CV_URL_EN,
       },
     ],
   },

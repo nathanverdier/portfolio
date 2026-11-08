@@ -8,3 +8,5 @@ export const ROOTME = 'https://www.root-me.org/Waarx'
 
 /** Le CV est dans `public/` : l'URL suit la base de Vite (GitHub Pages, Docker, etc.). */
 export const CV_URL = `${import.meta.env.BASE_URL}NATHAN_VERDIER_CV.pdf`
+/** Version anglaise, proposée quand le site est affiché en anglais. */
+export const CV_URL_EN = `${import.meta.env.BASE_URL}NATHAN_VERDIER_CV_EN.pdf`

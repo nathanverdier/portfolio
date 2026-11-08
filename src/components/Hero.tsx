@@ -1,5 +1,4 @@
 import portrait from '../assets/portrait.webp'
-import { CV_URL } from '../data/links'
 import { useLang } from '../i18n/LangContext'
 
 /** Accueil : qui je suis en une phrase, puis quatre chiffres vérifiables (classement, séries, hackathon). */
@@ -22,7 +21,7 @@ export function Hero() {
           <p className="hero__school">{h.school}</p>
           <p className="hero__line">{h.line}</p>
           <div className="hero__actions">
-            <a className="button" href={CV_URL} download>
+            <a className="button" href={h.cvUrl} download>
               {h.downloadCv}
             </a>
             <a className="button button--ghost" href="#contact">

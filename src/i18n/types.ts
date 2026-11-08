@@ -83,6 +83,7 @@ export interface Content {
     line: string
     metrics: Metric[]
     downloadCv: string
+    cvUrl: string
     contact: string
     portraitAlt: string
   }
